@@ -1,0 +1,155 @@
+body {
+    background-color: #101010;
+}
+
+#index_main {
+    height: 100vh;
+    // background-color: #303030;
+    background-color: #101010;
+    // background-color: #181818;
+    display: flex;
+
+    #welcome_message {
+        width: 350px;
+        max-width: 100%;
+        text-align: left;
+        margin: 0 auto;
+        padding: 1rem;
+        align-self: center;
+        z-index: 50;
+
+        transform: translateY(-10%);
+
+        @media screen and (max-width: 576px) { 
+            width: 340px;
+     }
+
+    }
+
+    // .typewriter {
+    //     text-align: center;
+    // }
+
+    h1 {
+        margin: 0;
+        display: inline-block;
+        text-shadow: 0 0 3px #00FF00;
+        // font-size: 2.5rem;
+        // text-shadow: 0 0 3px #00FF00, 0 0 5px #0000FF;
+    }
+
+    p,
+    #go_home {
+        font-family: $font_digit;
+        margin: 0;
+        display: inline-block;
+        font-size: 2em;
+        color: #00FF00;
+        text-shadow: 0 0 3px #00FF00;
+        font-weight: 200;
+    }
+}
+
+#go_home {
+    border: #00FF00 solid 2px;
+    padding: .25rem;
+    margin-top: 1.25rem !important;
+    animation-delay: 4.3s !important;
+    animation: fadeUp 1.5s ease, shake 1s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(70px); opacity: 0 }
+  100% { transform: translateY(10px); opacity: 1 }
+}
+
+@keyframes shake {
+  0% { transform: skewX(-10deg); }
+  5% { transform: skewX(10deg); }
+  10% { transform: skewX(-10deg); }
+  15% { transform: skewX(10deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
+// Animation ***********************************
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation-delay: 2.1s !important;
+  animation: 
+    typing 2s steps(40, end),
+    blink-caret 1s step-start infinite,
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 341px }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing_2 2s steps(40, end),
+    blink-caret 1s step-start infinite;
+}
+
+/* The typing effect */
+@keyframes typing_2 {
+  from { width: 0 }
+  to { width: 247px }
+}
+
+#index_portrait {
+    position: absolute;
+    opacity: .23;
+    width: 400px;
+    // filter: grayscale(80%);
+
+    @media screen and (max-width: 576px) { 
+        width: 300px;
+     }
+
+    top: 50%;
+   	left: 10%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 25;
+    
+    animation-delay: 4s !important;
+    animation: portraitSlideIn 1.5s ease;
+}
+
+@keyframes portraitSlideIn {
+  0% { left: 0%; opacity: 0 }
+  100% { left: 10%; opacity: .23 }
+}
+
+.index_portrait_line {
+    height: 100%;
+    position: absolute;
+
+    animation-delay: 4s !important;
+    animation: portraitSlideIn_2 1.5s ease;
+}
+
+
+@keyframes portraitSlideIn_2 {
+  0% { left: 0%; }
+  100% { left: 100%; }
+}
+

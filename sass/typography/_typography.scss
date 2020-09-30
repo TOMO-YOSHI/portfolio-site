@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'digit';
+	src: url(../../sources/font/Digit.ttf);
+}
+
+$font_digit: 'digit', sans-serif;
+
+h1, h2, h3, h4 {
+    font-family: 'digit';
+    color: #00FF00;
+    font-weight: 200;
+}
