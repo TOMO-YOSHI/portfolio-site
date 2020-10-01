@@ -1,3 +1,10 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    color: $textWhite;
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -13,4 +20,8 @@ img {
 
 .opacity_zero {
     opacity: 0 !important;
+}
+
+.orange {
+    color: $orange !important;
 }

@@ -2,6 +2,12 @@
 
 @import "typography/typography";
 
+@import "./variables/variables";
+
 @import "general";
 
-@import "pages/index";
+@import "./animation//page-transition";
+
+@import "./pages//pages";
+
+@import "./elements/elements";
