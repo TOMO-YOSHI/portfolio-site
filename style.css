@@ -917,6 +917,7 @@ body {
   bottom: 1rem;
   right: 1.5rem;
   z-index: 100;
+  font-weight: 300;
 }
 
 /* The typing effect */
@@ -1249,7 +1250,52 @@ body {
           animation: blink-caret 1s step-start infinite;
   display: inline-block;
   letter-spacing: .25rem;
+  margin-bottom: 1rem;
+}
+
+#skills-nav {
+  font-family: "digit", sans-serif;
+  color: #00FF00;
+  letter-spacing: .15rem;
+  margin-top: 0;
+  padding: 1rem;
   margin-bottom: 3rem;
+}
+
+#skills-nav li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+#skills-nav li:nth-of-type(1), #skills-nav li:nth-of-type(2) {
+  margin-right: 2rem;
+}
+
+#skills-nav li span {
+  font-size: 1.5rem;
+}
+
+#skills-nav li:hover {
+  text-shadow: 0 0 3px #00FF00;
+}
+
+#skills-nav li:hover span {
+  text-shadow: 0 0 3px orange;
+}
+
+.typewriter p {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing_2 1.25s steps(30, end), blink-caret 1s step-start infinite;
+          animation: typing_2 1.25s steps(30, end), blink-caret 1s step-start infinite;
 }
 
 #hard_skills_div,
@@ -1271,19 +1317,104 @@ body {
   position: absolute;
   top: -3.25rem;
   background-color: #101010;
-  padding: 0 .5rem;
+  padding: 0 .25rem 0 .5rem;
 }
 
-#hard_skills_div p:first-of-type,
-#tools_div p:first-of-type,
-#soft_skills_div p:first-of-type {
-  margin-bottom: 0;
+#hard_skills_div h2 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing_hard_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+          animation: typing_hard_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
 }
 
-#hard_skills_div p:last-of-type,
-#tools_div p:last-of-type,
-#soft_skills_div p:last-of-type {
-  margin-top: 0;
+#tools_div h2 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing_tools 0.75s steps(30, end), blink-caret 1s step-start infinite;
+          animation: typing_tools 0.75s steps(30, end), blink-caret 1s step-start infinite;
+}
+
+#soft_skills_div h2 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  -webkit-animation: typing_soft_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+          animation: typing_soft_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+}
+
+#soft_skills_div div p {
+  margin: 2rem;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing_hard_skills {
+  from {
+    width: 0;
+  }
+  to {
+    width: 217px;
+  }
+}
+@keyframes typing_hard_skills {
+  from {
+    width: 0;
+  }
+  to {
+    width: 217px;
+  }
+}
+
+@-webkit-keyframes typing_tools {
+  from {
+    width: 0;
+  }
+  to {
+    width: 115px;
+  }
+}
+
+@keyframes typing_tools {
+  from {
+    width: 0;
+  }
+  to {
+    width: 115px;
+  }
+}
+
+@-webkit-keyframes typing_soft_skills {
+  from {
+    width: 0;
+  }
+  to {
+    width: 213px;
+  }
+}
+
+@keyframes typing_soft_skills {
+  from {
+    width: 0;
+  }
+  to {
+    width: 213px;
+  }
 }
 
 .skills_open_close {
@@ -1299,6 +1430,7 @@ body {
   text-shadow: 0 0 3px #00FF00;
 }
 
+#tools_logo,
 #hard_skills_logo {
   display: -ms-grid;
   display: grid;
@@ -1308,6 +1440,7 @@ body {
   transition: height 1s;
 }
 
+#tools_logo figure,
 #hard_skills_logo figure {
   display: -ms-grid;
   display: grid;
@@ -1321,6 +1454,7 @@ body {
   text-align: center;
 }
 
+#tools_logo img,
 #hard_skills_logo img {
   max-height: 100px;
   -ms-flex-item-align: center;
@@ -1329,16 +1463,17 @@ body {
   padding: .5rem;
 }
 
+#tools_logo figcaption,
+#hard_skills_logo figcaption {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 #hard_skills_logo figure:nth-child(5) img,
 #hard_skills_logo figure:nth-child(7) img,
 #hard_skills_logo figure:nth-child(9) img,
 #hard_skills_logo figure:nth-child(10) img {
   background-color: #dddddd;
-}
-
-#hard_skills_logo figcaption {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
 }
 
 @keyframes blink-caret {

@@ -21,4 +21,31 @@ $('#hard_skills_div .skills_open_close').click(function () {
     $(this).text().toLowerCase() === "open" ? $(this).text("Close") : $(this).text("Open");
 });
 
+// Skills nav
+
+$("#skills-nav li").click(function(){
+    $("#skills-nav li span").addClass('visibility_hidden');
+    console.log($(this).text());
+    let selectedSkill = $(this).text();
+    // console.log(selectedSkill);
+    // console.log(selectedSkill.indexOf(" "));
+    // console.log(selectedSkill.lastIndexOf(" ") === 1 ? undefined : selectedSkill.lastIndexOf(" "));
+    selectedSkill = selectedSkill.slice(
+        selectedSkill.indexOf(" ") + 1, 
+        selectedSkill.lastIndexOf(" ") === 1 ? undefined : selectedSkill.lastIndexOf(" ")
+        );
+    console.log("#skills-nav-" + selectedSkill.toLowerCase() + " span");
+
+    // selectedSkill.slice(0, )
+    $("#skills-nav-" + selectedSkill.toLowerCase() + " span").removeClass('visibility_hidden');
+
+    let skillsDivIdName;
+
+    selectedSkill.toLowerCase() === "hard" || selectedSkill.toLowerCase() === "soft" ? 
+        skillsDivIdName = "#" + selectedSkill.toLowerCase() + "_skills_div":
+        skillsDivIdName = "#" + selectedSkill.toLowerCase() + "_div";
+
+    $("#hard_skills_div, #tools_div, #soft_skills_div").addClass('display_none');
+    $(skillsDivIdName).removeClass('display_none');
+});
 

@@ -29,5 +29,5 @@ export function flashPageAnimation (seconds) {
 
     setTimeout(function () {
         skip_animation.classList.add("display_none")
-    }, effectTime * 1000 + 400)
+    }, effectTime * 1000 + 500)
 }

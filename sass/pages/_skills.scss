@@ -45,7 +45,54 @@
     animation: blink-caret 1s step-start infinite;
     display: inline-block;
     letter-spacing: .25rem;
+    margin-bottom: 1rem;
+}
+
+#skills-nav {
+    font-family: $font_digit;
+    color: $green;
+    letter-spacing: .15rem;
+    margin-top: 0;
+    padding: 1rem;
     margin-bottom: 3rem;
+
+    // border: $green solid 2px;
+    // -webkit-box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
+    // -moz-box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
+    // box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
+
+    li {
+        display: inline-block;
+        cursor: pointer;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+            margin-right: 2rem;
+        }
+
+        span {
+            font-size: 1.5rem;
+        }
+    }
+
+    li:hover {
+        text-shadow: 0 0 3px $green;
+
+        span {
+             text-shadow: 0 0 3px $orange;
+        }
+    }
+}
+
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing_2 ($effectTime / 2) steps(30, end),
+    blink-caret 1s step-start infinite;
 }
 
 #hard_skills_div,
@@ -65,17 +112,74 @@
         position: absolute;
         top: -3.25rem;
         background-color: #101010;
-        padding: 0 .5rem;
+        padding: 0 .25rem 0 .5rem;
     }
 
-    p:first-of-type {
-        margin-bottom: 0;
-    }
+    // p:first-of-type {
+    //     margin-bottom: 0;
+    // }
 
-    p:last-of-type {
-        margin-top: 0;
-    }
+    // p:last-of-type {
+    //     margin-top: 0;
+    // }
 }
+
+#hard_skills_div h2 {
+    // CSS for Typing Effect
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing_hard_skills 1.5s steps(30, end),
+        blink-caret 1s step-start infinite;
+}
+
+#tools_div h2 {
+    // CSS for Typing Effect
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing_tools .75s steps(30, end),
+        blink-caret 1s step-start infinite;
+
+}
+
+#soft_skills_div h2 {
+    // CSS for Typing Effect
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing_soft_skills 1.5s steps(30, end),
+        blink-caret 1s step-start infinite;
+}
+
+#soft_skills_div div p {
+    margin: 2rem;
+}
+
+
+/* The typing effect */
+@keyframes typing_hard_skills {
+  from { width: 0 }
+  to { width: 217px }
+}
+
+@keyframes typing_tools {
+  from { width: 0 }
+  to { width: 115px }
+}
+
+@keyframes typing_soft_skills {
+  from { width: 0 }
+  to { width: 213px }
+}
+
+
 
 .skills_open_close {
     font-family: $font_digit;
@@ -90,6 +194,7 @@
     }
 }
 
+#tools_logo,
 #hard_skills_logo {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -116,16 +221,18 @@
         padding: .5rem;
     }
 
+    figcaption {
+        align-self: flex-end;
+    }
+}
+
+#hard_skills_logo {
     figure:nth-child(5) img,
     figure:nth-child(7) img,
     figure:nth-child(9) img,
     figure:nth-child(10) img {
-        background-color: $textWhite;
-    }
-
-    figcaption {
-        align-self: flex-end;
-    }
+            background-color: $textWhite;
+        }
 }
 
 // animation ******************************************************
