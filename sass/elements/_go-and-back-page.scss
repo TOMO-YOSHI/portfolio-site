@@ -1,0 +1,40 @@
+.back_and_go_div {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back_page,
+.go_page {
+    font-family: $font_digit;
+    letter-spacing: .15rem;
+    color: $green;
+    cursor: pointer;
+
+    &:hover {
+        // animation: none;
+        text-shadow: 0 0 5px $green;
+    }
+}
+
+.back_page {
+    margin-left: .5rem;
+}
+
+.go_page {
+    margin-right: .5rem;
+    text-align: right;
+}
+
+
+@media screen and (max-width: 576px) {
+    .back_and_go_div {
+        display: block;
+    }
+
+    .back_page {
+        margin-bottom: .5rem;
+    }
+
+ }

@@ -10,6 +10,11 @@ img {
     height: auto;
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
 .visibility_hidden {
     visibility: hidden;
 }
@@ -24,4 +29,8 @@ img {
 
 .orange {
     color: $orange !important;
+}
+
+.display_none {
+    display: none !important;
 }

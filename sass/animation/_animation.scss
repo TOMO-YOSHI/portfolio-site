@@ -1,0 +1,96 @@
+// reset
+// *,
+// :before,
+// :after {
+//     box-sizing: border-box;
+//     padding: 0;
+//     margin: 0;
+// }
+
+// styles
+.hide {
+    display: none;
+}
+
+// Animation class
+
+.shut_down {
+    animation: shutDown 1.5s ease; // pageTransitionAnimation should be modified if the animation duration is changed.
+}
+
+.set_up {
+    animation: setUp .5s ease;
+}
+
+.set_off {
+    animation: setOff .75s ease;
+}
+
+.slide_out {
+    animation: slideOut .55s ease;
+}
+
+@keyframes shutDown {
+    10% {transform: scale(1, 0.002);}
+    50% {transform: scale(0.2, 0.002);
+        opacity: 1;}
+    90% {transform: scale(0.2, 0.002);
+        opacity: 0;}
+    100% {transform: scale(0.2, 0.002);
+        opacity: 0;}
+}
+
+@keyframes turnOn {
+    10% {transform: scale(0.2, 0.002);
+        opacity: 0;}
+    50% {transform: scale(0.2, 0.002);
+        opacity: 1;}
+    100% {transform: scale(1, 0.002);}
+}
+
+@keyframes setUp {
+  0% { transform: translateY(30px); opacity: 0 }
+  100% { transform: translateY(0px); opacity: 1 }
+}
+
+@keyframes setOff {
+  0% { transform: translateY(0px); opacity: 1 }
+  100% { transform: translateY(30px); opacity: 0 }
+}
+
+// .fadeIn {
+//     z-index: 10;
+// }
+
+@keyframes slideOut {
+  0% { transform: translateX(0); opacity: 1 }
+  100% { transform: translateX(-120%); opacity: 1 }
+}
+
+.slide_in_from_top {
+    animation: slideInFromTop .5s ease;
+}
+
+@keyframes slideInFromTop {
+  0% { transform: translateY(-100%);}
+  100% { transform: translateY(0%);}
+}
+
+.slide_up_to_top {
+    animation: slideUpToTop 1s ease;
+}
+
+@keyframes slideUpToTop {
+  0% { transform: translateY(0%);}
+  50% { transform: translateY(-100%);}
+  100% { transform: translateY(-100%);}
+}
+
+.fade_in {
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}

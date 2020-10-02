@@ -1,0 +1,26 @@
+#global_nav_div {
+    position: absolute;
+    background-color: $backgroundColorBlack;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 90;
+    justify-content: center;
+    align-items: center;
+    // transform: translateY(-100%);
+}
+
+#global_nav {
+    font-family: $font_digit;
+    color: $green;
+    letter-spacing: .15rem;
+
+    li {
+        text-align: center;
+        margin: 1.5rem 0;
+
+        &:hover {
+            text-shadow: 0 0 3px $green;
+        }
+    }
+}
