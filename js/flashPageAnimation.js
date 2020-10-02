@@ -26,4 +26,8 @@ export function flashPageAnimation (seconds) {
     setTimeout(function () {
         welcomePageGo.classList.remove("visibility_hidden")
     }, effectTime * 1000 + 400);
+
+    setTimeout(function () {
+        skip_animation.classList.add("display_none")
+    }, effectTime * 1000 + 400)
 }

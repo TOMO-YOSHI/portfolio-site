@@ -42,13 +42,24 @@ export function pageTransitionAnimationWithArguments(buttonId, closeContensId, n
     });
 }
 
-export function pageSlideTransitionAnimationWithArguments(buttonId, closeContensId, nextPage) {
+export function pageSlideTransitionAnimationWithArguments(buttonId, closeContentsId, nextPage, addedClass) {
 
     $(buttonId).click(function () {
-        $(closeContensId).addClass('slide_out');
+        $(closeContentsId).addClass(addedClass);
 
         setTimeout(function () {
             window.location = nextPage;
-        }, 500)
+        }, 400)
     });
 }
+
+// export function pageSlideTransitionAnimationWithArguments(buttonId, closeContensId, nextPage) {
+
+//     $(buttonId).click(function () {
+//         $(closeContensId).addClass('slide_out');
+
+//         setTimeout(function () {
+//             window.location = nextPage;
+//         }, 400)
+//     });
+// }

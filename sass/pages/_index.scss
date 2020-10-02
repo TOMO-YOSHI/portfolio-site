@@ -119,6 +119,14 @@ $portraitOpacity: .35;
     animation: portraitSlideIn_2 1.5s ease;
 }
 
+#skip_animation {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.5rem;
+  z-index: 100;
+  // font-size: small;
+}
+
 // Animation ***********************************
 
 /* The typing effect */
@@ -180,4 +188,3 @@ $portraitOpacity: .35;
 //   20% { transform: skewX(0deg); }
 //   100% { transform: skewX(0deg); }  
 // }
-

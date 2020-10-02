@@ -19,15 +19,11 @@
 }
 
 .set_up {
-    animation: setUp .5s ease;
+    animation: setUp .4s ease;
 }
 
 .set_off {
     animation: setOff .75s ease;
-}
-
-.slide_out {
-    animation: slideOut .55s ease;
 }
 
 @keyframes shutDown {
@@ -62,9 +58,40 @@
 //     z-index: 10;
 // }
 
-@keyframes slideOut {
-  0% { transform: translateX(0); opacity: 1 }
-  100% { transform: translateX(-120%); opacity: 1 }
+.slide_out_left {
+    animation: slideOutLeft .45s ease;
+}
+
+@keyframes slideOutLeft {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(-120%);}
+}
+
+.slide_in_left {
+    animation: slideInLeft .45s ease;
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-120%);}
+  100% { transform: translateX(0%);}
+}
+
+.slide_out_right {
+    animation: slideOutRight .45s ease;
+}
+
+@keyframes slideOutRight {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(120%);}
+}
+
+.slide_in_right {
+    animation: slideOutRight .45s ease;
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(120%);}
+  100% { transform: translateX(0);}
 }
 
 .slide_in_from_top {
@@ -94,3 +121,22 @@
   0% { opacity: 0 }
   100% { opacity: 1 }
 }
+
+.fade_out {
+    animation: fadeOut 1s ease;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+.height_to_auto {
+    animation: heightToAuto .45s ease;
+}
+
+@keyframes heightToAuto {
+  0% { height: 0; }
+  100% { height: auto; }
+}
+

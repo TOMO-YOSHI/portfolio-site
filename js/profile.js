@@ -3,7 +3,7 @@ import { pageTransitionAnimationWithArguments, pageSlideTransitionAnimationWithA
 
 pageTransitionAnimationWithArguments("#go_to_welcom", "#profile_body", "./index.html");
 
-pageSlideTransitionAnimationWithArguments("#go_to_skill", "#profile_main", "./profile.html");
+pageSlideTransitionAnimationWithArguments("#go_to_skills", "#profile_main", "./skills.html", "slide_out_left");
 // pageSlideTransitionAnimationWithArguments("#go_to_skill", "#profile_body", "./profile.html");
 
 
