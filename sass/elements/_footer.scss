@@ -1,0 +1,30 @@
+#pageFooter {
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+    // position: absolute;
+    bottom: 0;
+}
+
+#footerCopyright {
+    margin: 0;
+    font-weight: 200;
+    font-size: small;
+}
+
+#contactList {
+    display: flex;
+    font-size: 2rem;
+
+    li {
+        margin: .4rem;
+
+        &:hover {
+            color: $orange;
+            text-shadow: 0 0 3px $orange;
+        }
+    }
+}

@@ -1237,11 +1237,6 @@ body {
   max-width: 1000px;
 }
 
-#skills_main h2 {
-  letter-spacing: .1rem;
-  font-size: 2rem;
-}
-
 #skills_main_title {
   font-size: 3rem;
   text-shadow: 0 0 3px #00FF00;
@@ -1315,48 +1310,70 @@ body {
 #tools_div h2,
 #soft_skills_div h2 {
   position: absolute;
-  top: -3.25rem;
+  top: -2.5rem;
   background-color: #101010;
   padding: 0 .25rem 0 .5rem;
+  font-size: 1.5rem;
 }
 
 #hard_skills_div h2 {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
   letter-spacing: .15em;
   /* Adjust as needed */
-  -webkit-animation: typing_hard_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
-          animation: typing_hard_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+}
+
+@media screen and (min-width: 576px) {
+  #hard_skills_div h2 {
+    top: -3.25rem;
+    font-size: 2rem;
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    -webkit-animation: typing_hard_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+            animation: typing_hard_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+  }
 }
 
 #tools_div h2 {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
   letter-spacing: .15em;
   /* Adjust as needed */
-  -webkit-animation: typing_tools 0.75s steps(30, end), blink-caret 1s step-start infinite;
-          animation: typing_tools 0.75s steps(30, end), blink-caret 1s step-start infinite;
+}
+
+@media screen and (min-width: 576px) {
+  #tools_div h2 {
+    top: -3.25rem;
+    font-size: 2rem;
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    -webkit-animation: typing_tools 0.75s steps(30, end), blink-caret 1s step-start infinite;
+            animation: typing_tools 0.75s steps(30, end), blink-caret 1s step-start infinite;
+  }
 }
 
 #soft_skills_div h2 {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
   letter-spacing: .15em;
   /* Adjust as needed */
-  -webkit-animation: typing_soft_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
-          animation: typing_soft_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+}
+
+@media screen and (min-width: 576px) {
+  #soft_skills_div h2 {
+    top: -3.25rem;
+    font-size: 2rem;
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    -webkit-animation: typing_soft_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+            animation: typing_soft_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+  }
 }
 
 #soft_skills_div div p {
@@ -1434,10 +1451,8 @@ body {
 #hard_skills_logo {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
-  -webkit-transition: height 1s;
-  transition: height 1s;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 #tools_logo figure,
@@ -1467,6 +1482,38 @@ body {
 #hard_skills_logo figcaption {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+@media screen and (max-width: 992px) {
+  #tools_logo,
+  #hard_skills_logo {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #tools_logo,
+  #hard_skills_logo {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #tools_logo,
+  #hard_skills_logo {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  #tools_logo figure,
+  #hard_skills_logo figure {
+    margin: 0;
+  }
+  #tools_logo img,
+  #hard_skills_logo img {
+    display: none;
+  }
 }
 
 #hard_skills_logo figure:nth-child(5) img,
@@ -1679,5 +1726,42 @@ body {
 
 #global_nav li:hover {
   text-shadow: 0 0 3px #00FF00;
+}
+
+#pageFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  bottom: 0;
+}
+
+#footerCopyright {
+  margin: 0;
+  font-weight: 200;
+  font-size: small;
+}
+
+#contactList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+}
+
+#contactList li {
+  margin: .4rem;
+}
+
+#contactList li:hover {
+  color: orange;
+  text-shadow: 0 0 3px orange;
 }
 /*# sourceMappingURL=style.css.map */

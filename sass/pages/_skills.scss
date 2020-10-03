@@ -31,10 +31,10 @@
     margin: 0 auto;
     max-width: 1000px;
 
-    h2 {
-        letter-spacing: .1rem;
-        font-size: 2rem;
-    }
+    // h2 {
+    //     letter-spacing: .1rem;
+    //     font-size: 2rem;
+    // }
 }
 
 #skills_main_title {
@@ -110,9 +110,10 @@
 
     h2 {
         position: absolute;
-        top: -3.25rem;
+        top: -2.5rem;
         background-color: #101010;
         padding: 0 .25rem 0 .5rem;
+        font-size: 1.5rem;
     }
 
     // p:first-of-type {
@@ -127,40 +128,56 @@
 #hard_skills_div h2 {
     // CSS for Typing Effect
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-        typing_hard_skills 1.5s steps(30, end),
-        blink-caret 1s step-start infinite;
+    @media screen and (min-width: 576px) {
+        top: -3.25rem;
+        font-size: 2rem;
+        border-right: .15em solid orange; /* The typwriter cursor */
+        animation: 
+            typing_hard_skills 1.5s steps(30, end),
+            blink-caret 1s step-start infinite;
+    }
 }
 
 #tools_div h2 {
     // CSS for Typing Effect
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-        typing_tools .75s steps(30, end),
-        blink-caret 1s step-start infinite;
-
+    @media screen and (min-width: 576px) {
+        top: -3.25rem;
+        font-size: 2rem;
+        border-right: .15em solid orange; /* The typwriter cursor */
+        animation: 
+            typing_tools .75s steps(30, end),
+            blink-caret 1s step-start infinite;
+    }
 }
 
 #soft_skills_div h2 {
     // CSS for Typing Effect
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-        typing_soft_skills 1.5s steps(30, end),
-        blink-caret 1s step-start infinite;
+    @media screen and (min-width: 576px) {
+        top: -3.25rem;
+        font-size: 2rem;
+        border-right: .15em solid orange; /* The typwriter cursor */
+        animation: 
+            typing_soft_skills 1.5s steps(30, end),
+            blink-caret 1s step-start infinite;
+    }
 }
 
 #soft_skills_div div p {
     margin: 2rem;
 }
+
+@media screen and (min-width: 576px) {
+
+}
+
 
 
 /* The typing effect */
@@ -196,9 +213,12 @@
 
 #tools_logo,
 #hard_skills_logo {
+    // display: flex;
+    // flex-wrap: wrap;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    transition: height 1s;
+    // grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    // transition: 1s;
 
     figure {
         display: grid;
@@ -224,6 +244,47 @@
     figcaption {
         align-self: flex-end;
     }
+
+
+    // Large devices (desktops, 992px and up)
+    @media screen and (max-width: 992px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media screen and (max-width: 576px) {
+        grid-template-columns: 1fr 1fr;
+
+        figure {
+            margin: 0;
+        }
+        
+        img {
+            display: none;
+        }
+        
+        // #hard_skills_div h2,
+        // #tools_div h2,
+        // #soft_skills_div h2 {
+        //     animation-name: none;
+        //     animation-duration: 0s;
+        //     animation-timing-function: ease;
+        //     animation-delay: 0s;
+        //     animation-iteration-count: 1;
+        //     animation-direction: normal;
+        //     animation-fill-mode: none;
+        //     animation-play-state: running;
+        // }
+
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    // @media screen and (max-width: 1200px) { ... }
 }
 
 #hard_skills_logo {
