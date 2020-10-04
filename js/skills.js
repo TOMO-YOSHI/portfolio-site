@@ -25,6 +25,8 @@ $('#hard_skills_div .skills_open_close').click(function () {
 
 $("#skills-nav li").click(function(){
     $("#skills-nav li span").addClass('visibility_hidden');
+    // $("#skills-nav li").removeClass('orange');
+
     console.log($(this).text());
     let selectedSkill = $(this).text();
     // console.log(selectedSkill);
@@ -38,6 +40,7 @@ $("#skills-nav li").click(function(){
 
     // selectedSkill.slice(0, )
     $("#skills-nav-" + selectedSkill.toLowerCase() + " span").removeClass('visibility_hidden');
+    // $("#skills-nav-" + selectedSkill.toLowerCase()).addClass('orange');
 
     let skillsDivIdName;
 

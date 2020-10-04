@@ -21,7 +21,8 @@
         cursor: pointer;
 
         &:hover {
-            text-shadow: 0 0 3px $green;
+            color: $orange;
+            text-shadow: 0 0 3px $orange;
         }
     }
 }

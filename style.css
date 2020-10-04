@@ -882,6 +882,22 @@ body {
           animation: typing_2 1.25s steps(30, end), blink-caret 1s step-start infinite;
 }
 
+@media screen and (max-width: 576px) {
+  .typewriter h1 {
+    font-size: 1.75rem;
+    -webkit-animation: typing_mobile 1.25s steps(30, end), blink-caret 1s step-start infinite;
+            animation: typing_mobile 1.25s steps(30, end), blink-caret 1s step-start infinite;
+  }
+  #welcome_message p {
+    -webkit-animation: typing_2_mobile 1.25s steps(30, end), blink-caret 1s step-start infinite;
+            animation: typing_2_mobile 1.25s steps(30, end), blink-caret 1s step-start infinite;
+  }
+  #index_main p,
+  #index_main #go_home {
+    font-size: 1.75rem !important;
+  }
+}
+
 #index_portrait {
   position: absolute;
   opacity: 0.35;
@@ -938,7 +954,6 @@ body {
   }
 }
 
-/* The typing effect */
 @-webkit-keyframes typing_2 {
   from {
     width: 0;
@@ -947,12 +962,49 @@ body {
     width: 303px;
   }
 }
+
 @keyframes typing_2 {
   from {
     width: 0;
   }
   to {
     width: 303px;
+  }
+}
+
+/* The typing effect mobile */
+@-webkit-keyframes typing_mobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 299px;
+  }
+}
+@keyframes typing_mobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 299px;
+  }
+}
+
+@-webkit-keyframes typing_2_mobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 212px;
+  }
+}
+
+@keyframes typing_2_mobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 212px;
   }
 }
 
@@ -1114,10 +1166,15 @@ body {
 }
 
 #profile_main {
-  height: 100vh;
   padding: 2.2rem 2rem 0;
   margin: 0 auto;
   max-width: 1000px;
+}
+
+@media screen and (min-width: 479px) {
+  #profile_main {
+    height: 100vh;
+  }
 }
 
 #profile_main h2 {
@@ -1139,6 +1196,8 @@ body {
 #about_div {
   padding: 1rem;
   position: relative;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
   border: #00FF00 solid 2px;
   -webkit-box-shadow: 0px 0px 3px 0px lime;
   box-shadow: 0px 0px 3px 0px lime;
@@ -1212,6 +1271,25 @@ body {
   }
 }
 
+@media screen and (max-width: 479px) {
+  #profile_main h1 {
+    font-size: 2.5rem;
+  }
+  #profile_main #about_div {
+    padding: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  #profile_main #about_div h2 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -3.75rem;
+    background-color: transparent;
+    padding: 0rem;
+  }
+}
+
 #skills_body {
   position: relative;
 }
@@ -1271,7 +1349,8 @@ body {
 }
 
 #skills-nav li:hover {
-  text-shadow: 0 0 3px #00FF00;
+  color: orange;
+  text-shadow: 0 0 3px orange;
 }
 
 #skills-nav li:hover span {
@@ -1314,6 +1393,8 @@ body {
   background-color: #101010;
   padding: 0 .25rem 0 .5rem;
   font-size: 1.5rem;
+  color: orange;
+  text-shadow: 0 0 3px orange;
 }
 
 #hard_skills_div h2 {
@@ -1327,12 +1408,14 @@ body {
 
 @media screen and (min-width: 576px) {
   #hard_skills_div h2 {
+    color: #00FF00;
+    text-shadow: 0 0 3px #00FF00;
     top: -3.25rem;
     font-size: 2rem;
     border-right: .15em solid orange;
     /* The typwriter cursor */
-    -webkit-animation: typing_hard_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
-            animation: typing_hard_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+    -webkit-animation: typing_hard_skills 1.25s steps(30, end), blink-caret 1s step-start infinite;
+            animation: typing_hard_skills 1.25s steps(30, end), blink-caret 1s step-start infinite;
   }
 }
 
@@ -1347,6 +1430,8 @@ body {
 
 @media screen and (min-width: 576px) {
   #tools_div h2 {
+    color: #00FF00;
+    text-shadow: 0 0 3px #00FF00;
     top: -3.25rem;
     font-size: 2rem;
     border-right: .15em solid orange;
@@ -1367,12 +1452,14 @@ body {
 
 @media screen and (min-width: 576px) {
   #soft_skills_div h2 {
+    color: #00FF00;
+    text-shadow: 0 0 3px #00FF00;
     top: -3.25rem;
     font-size: 2rem;
     border-right: .15em solid orange;
     /* The typwriter cursor */
-    -webkit-animation: typing_soft_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
-            animation: typing_soft_skills 1.5s steps(30, end), blink-caret 1s step-start infinite;
+    -webkit-animation: typing_soft_skills 1.25s steps(30, end), blink-caret 1s step-start infinite;
+            animation: typing_soft_skills 1.25s steps(30, end), blink-caret 1s step-start infinite;
   }
 }
 
@@ -1554,6 +1641,170 @@ body {
   }
 }
 
+@media screen and (max-width: 575px) {
+  #skills_main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  #skills_main #skills-nav {
+    padding-top: .5rem;
+    padding-left: 0;
+    font-size: 1.15rem;
+  }
+  #skills_main #hard_skills_div,
+  #skills_main #soft_skills_div,
+  #skills_main #tools_div {
+    padding: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  #skills_main #hard_skills_div h2,
+  #skills_main #soft_skills_div h2,
+  #skills_main #tools_div h2 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -3.75rem;
+    background-color: transparent;
+    padding: 0rem;
+  }
+  #skills_main #hard_skills_div figure,
+  #skills_main #soft_skills_div figure,
+  #skills_main #tools_div figure {
+    -ms-grid-column-align: left;
+        justify-self: left;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  #skills_main #hard_skills_div figcaption,
+  #skills_main #soft_skills_div figcaption,
+  #skills_main #tools_div figcaption {
+    font-size: 1.25rem;
+  }
+}
+
+#contact_body {
+  position: relative;
+}
+
+#contact_body::after {
+  content: "";
+  background-image: url("../../sources/image/portrait_line_white_0025px.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto 160%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-position: right;
+  z-index: -1;
+}
+
+#contact_main {
+  padding: 2.2rem 2rem 0;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+@media screen and (min-width: 479px) {
+  #contact_main {
+    height: 100vh;
+  }
+}
+
+#contact_main h2 {
+  letter-spacing: .1rem;
+  font-size: 2rem;
+}
+
+#contact_main_title {
+  font-size: 3rem;
+  text-shadow: 0 0 3px #00FF00;
+  padding-right: .5rem;
+  -webkit-animation: blink-caret 1s step-start infinite;
+          animation: blink-caret 1s step-start infinite;
+  display: inline-block;
+  letter-spacing: .25rem;
+  margin-bottom: 0;
+}
+
+#about_div {
+  padding: 1rem;
+  position: relative;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  border: #00FF00 solid 2px;
+  -webkit-box-shadow: 0px 0px 3px 0px lime;
+  box-shadow: 0px 0px 3px 0px lime;
+}
+
+#about_div h2 {
+  position: absolute;
+  top: -3.25rem;
+  background-color: #101010;
+  padding: 0 .5rem;
+}
+
+#about_div p:first-of-type {
+  margin-bottom: 0;
+}
+
+#about_div p:last-of-type {
+  margin-top: 0;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@keyframes backgroundImageSlideIn {
+  0% {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: １;
+  }
+}
+
+@keyframes backgroundImageFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: １;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #contact_main h1 {
+    font-size: 2.5rem;
+  }
+  #contact_main #about_div {
+    padding: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  #contact_main #about_div h2 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -3.75rem;
+    background-color: transparent;
+    padding: 0rem;
+  }
+}
+
 #hamburger_wrap {
   position: fixed;
   right: 1.5rem;
@@ -1674,7 +1925,8 @@ body {
 
 .back_page:hover,
 .go_page:hover {
-  text-shadow: 0 0 5px #00FF00;
+  color: orange;
+  text-shadow: 0 0 5px orange;
 }
 
 .back_page {
@@ -1692,6 +1944,12 @@ body {
   }
   .back_page {
     margin-bottom: .5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .back_and_go_div {
+    font-size: 1.1rem;
   }
 }
 
@@ -1725,7 +1983,8 @@ body {
 }
 
 #global_nav li:hover {
-  text-shadow: 0 0 3px #00FF00;
+  color: orange;
+  text-shadow: 0 0 3px orange;
 }
 
 #pageFooter {
@@ -1745,6 +2004,7 @@ body {
 
 #footerCopyright {
   margin: 0;
+  margin-right: 1rem;
   font-weight: 200;
   font-size: small;
 }

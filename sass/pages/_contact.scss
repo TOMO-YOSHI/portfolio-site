@@ -1,4 +1,4 @@
-#profile_body {
+#contact_body {
     // background-image: url('../../sources/image/portrait_line_white_0025px.png');
     // background-repeat: no-repeat;
     // background-attachment: fixed;
@@ -8,7 +8,7 @@
     position: relative;
 }
 
-#profile_body::after {
+#contact_body::after {
     content: "";
     background-image: url('../../sources/image/portrait_line_white_0025px.png');
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@
     z-index: -1;
 }
 
-#profile_main {
+#contact_main {
     // height: 100vh;
     padding: 2.2rem 2rem 0;
     margin: 0 auto;
@@ -41,7 +41,7 @@
     }
 }
 
-#profile_main_title {
+#contact_main_title {
     font-size: 3rem;
     text-shadow: 0 0 3px $green;
     // border-right: .3rem solid orange; /* The typwriter cursor */
@@ -49,7 +49,8 @@
     animation: blink-caret 1s step-start infinite;
     display: inline-block;
     letter-spacing: .25rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
+    // margin-bottom: 3rem;
 }
 
 #about_div {
@@ -101,7 +102,7 @@
 // Mobile layput
 
 @media screen and (max-width: 479px) {
-    #profile_main {
+    #contact_main {
         h1 {
             font-size: 2.5rem;
             // padding-left: 1rem;

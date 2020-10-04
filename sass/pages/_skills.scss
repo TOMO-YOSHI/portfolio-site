@@ -76,7 +76,8 @@
     }
 
     li:hover {
-        text-shadow: 0 0 3px $green;
+        color: $orange;
+        text-shadow: 0 0 3px $orange;
 
         span {
              text-shadow: 0 0 3px $orange;
@@ -114,15 +115,9 @@
         background-color: #101010;
         padding: 0 .25rem 0 .5rem;
         font-size: 1.5rem;
+        color: $orange;
+        text-shadow: 0 0 3px $orange;
     }
-
-    // p:first-of-type {
-    //     margin-bottom: 0;
-    // }
-
-    // p:last-of-type {
-    //     margin-top: 0;
-    // }
 }
 
 #hard_skills_div h2 {
@@ -131,11 +126,13 @@
     white-space: nowrap; /* Keeps the content on a single line */
     letter-spacing: .15em; /* Adjust as needed */
     @media screen and (min-width: 576px) {
+        color: $green;
+        text-shadow: 0 0 3px $green;
         top: -3.25rem;
         font-size: 2rem;
         border-right: .15em solid orange; /* The typwriter cursor */
         animation: 
-            typing_hard_skills 1.5s steps(30, end),
+            typing_hard_skills 1.25s steps(30, end),
             blink-caret 1s step-start infinite;
     }
 }
@@ -146,6 +143,8 @@
     white-space: nowrap; /* Keeps the content on a single line */
     letter-spacing: .15em; /* Adjust as needed */
     @media screen and (min-width: 576px) {
+        color: $green;
+        text-shadow: 0 0 3px $green;
         top: -3.25rem;
         font-size: 2rem;
         border-right: .15em solid orange; /* The typwriter cursor */
@@ -161,11 +160,13 @@
     white-space: nowrap; /* Keeps the content on a single line */
     letter-spacing: .15em; /* Adjust as needed */
     @media screen and (min-width: 576px) {
+        color: $green;
+        text-shadow: 0 0 3px $green;
         top: -3.25rem;
         font-size: 2rem;
         border-right: .15em solid orange; /* The typwriter cursor */
         animation: 
-            typing_soft_skills 1.5s steps(30, end),
+            typing_soft_skills 1.25s steps(30, end),
             blink-caret 1s step-start infinite;
     }
 }
@@ -173,12 +174,6 @@
 #soft_skills_div div p {
     margin: 2rem;
 }
-
-@media screen and (min-width: 576px) {
-
-}
-
-
 
 /* The typing effect */
 @keyframes typing_hard_skills {
@@ -311,3 +306,50 @@
   0% { opacity: 0 }
   100% { opacity: １ }
 }
+
+// Mobile layput
+
+@media screen and (max-width: 575px) {
+    #skills_main {
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0;
+            // padding-left: 1rem;
+        }
+
+        #skills-nav {
+            padding-top: .5rem;
+            padding-left: 0;
+            font-size: 1.15rem;
+        }
+
+
+        #hard_skills_div,
+        #soft_skills_div,
+        #tools_div {
+            padding: 0;
+            border: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+
+            h2 {
+                font-size: 1.5rem;
+                position: absolute;
+                top: -3.75rem;
+                background-color: transparent;
+                padding: 0rem;
+            }
+
+            figure {
+                justify-self: left;
+                align-self: flex-start;
+            }
+
+            figcaption {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+

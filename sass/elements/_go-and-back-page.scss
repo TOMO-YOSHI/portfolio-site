@@ -14,7 +14,8 @@
 
     &:hover {
         // animation: none;
-        text-shadow: 0 0 5px $green;
+        color: $orange;
+        text-shadow: 0 0 5px $orange;
     }
 }
 
@@ -36,5 +37,10 @@
     .back_page {
         margin-bottom: .5rem;
     }
+ }
 
+ @media screen and (max-width: 768px) {
+    .back_and_go_div {
+        font-size: 1.1rem;
+    }
  }
