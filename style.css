@@ -1730,6 +1730,87 @@ body {
   margin-bottom: 0;
 }
 
+#form_div {
+  max-width: 600px;
+  margin: 3rem auto 3rem;
+}
+
+#contact_form {
+  display: -ms-grid;
+  display: grid;
+}
+
+#contact_form label {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 140px 1fr;
+      grid-template-columns: 140px 1fr;
+  margin-bottom: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact_form label span {
+  font-family: "digit", sans-serif;
+  text-shadow: 0 0 3px orange;
+  letter-spacing: .1rem;
+  color: orange;
+}
+
+#contact_form label input {
+  background-color: #101010;
+  border: none;
+  border-bottom: orange solid 1px;
+  color: #dddddd;
+  padding: .5rem;
+  font-size: 18px;
+}
+
+#contact_form label input:focus {
+  outline: 1px solid orange !important;
+  -webkit-box-shadow: 0px 0px 15px 0px orange;
+  box-shadow: 0px 0px 15px 0px orange;
+}
+
+#contact_form label textarea {
+  background-color: #101010;
+  border: none;
+  border: orange solid 1px;
+  color: #dddddd;
+  padding: .5rem;
+  font-size: 18px;
+  height: 100px;
+}
+
+#contact_form label textarea:focus {
+  outline: 1px solid orange !important;
+  -webkit-box-shadow: 0px 0px 15px 0px orange;
+  box-shadow: 0px 0px 15px 0px orange;
+}
+
+#contact_form button {
+  font-family: "digit", sans-serif;
+  letter-spacing: .1rem;
+  color: #101010;
+  border: orange 1px solid;
+  padding: .5rem;
+  background-color: orange;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-box-shadow: 0px 0px 3px 0px orange;
+  box-shadow: 0px 0px 3px 0px orange;
+}
+
+#contact_form button:hover {
+  background-color: transparent;
+  color: orange;
+  text-shadow: 0 0 5px orange;
+  -webkit-box-shadow: 0px 0px 15px 0px orange;
+          box-shadow: 0px 0px 15px 0px orange;
+}
+
 #about_div {
   padding: 1rem;
   position: relative;
@@ -1787,21 +1868,18 @@ body {
 }
 
 @media screen and (max-width: 479px) {
-  #contact_main h1 {
-    font-size: 2.5rem;
+  #contact_main #contact_form label {
+    display: unset;
   }
-  #contact_main #about_div {
-    padding: 0;
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  #contact_main #contact_form label span {
+    display: block;
+    margin-bottom: .5rem;
   }
-  #contact_main #about_div h2 {
-    font-size: 1.5rem;
-    position: absolute;
-    top: -3.75rem;
-    background-color: transparent;
-    padding: 0rem;
+  #contact_main #contact_form label input {
+    width: 96%;
+  }
+  #contact_main #contact_form label textarea {
+    width: 96%;
   }
 }
 

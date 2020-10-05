@@ -29,7 +29,7 @@
         <div id="global_nav_div" class="display_none">
             <ul id="global_nav">
                 <li class="opacity_zero">Welcome</li>
-                <li class="opacity_zero">contact</li>
+                <li class="opacity_zero">profile</li>
                 <li class="opacity_zero">Skills</li>
                 <li class="opacity_zero">Portfolio</li>
                 <li class="opacity_zero">Contact</li>
@@ -44,14 +44,18 @@
         <p>If you have something to talk to me, feel free to get in touch with me. I'm waiting for your kind email!</p>
         <div id="form_div">
             <!-- <h2>Contact Form</h2> -->
-            <form action="https://formspree.io/f/xyybzrpd" method="POST">
-                <label>
-                    Your email:
-                    <input type="text" name="_replyto">
+            <form id="contact_form" action="https://formspree.io/f/xyybzrpd" method="POST">
+                <label id="contact_name">
+                    <span>Your name :</span>
+                    <input type="text" name="name" required>
                 </label>
-                <label>
-                    Your message:
-                    <textarea name="message"></textarea>
+                <label id="contact_email">
+                    <span>Your email :</span>
+                    <input type="text" name="_replyto" required>
+                </label>
+                <label id="contact_message">
+                    <span>Your message :</span>
+                    <textarea name="message" required></textarea>
                 </label>
             
                 <!-- your other form fields go here -->
@@ -60,7 +64,7 @@
             </form>
         </div>
         <div class="back_and_go_div">
-            <p id="go_to_welcom" class="back_page">&lt; Back To Portfolio Page</p>
+            <p id="go_to_portfolio" class="back_page">&lt; Back To Portfolio Page</p>
         </div>
     </main>
 
