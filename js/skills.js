@@ -5,7 +5,7 @@ import { pageTransitionAnimationWithArguments, pageSlideTransitionAnimationWithA
 
 pageSlideTransitionAnimationWithArguments("#go_to_profile", "#skills_main", "./profile.html", "slide_out_right");
 
-pageSlideTransitionAnimationWithArguments("#go_to_portfolio", "#skills_main", "./portfolio.html", "slide_out_left");
+pageSlideTransitionAnimationWithArguments("#go_to_works", "#skills_main", "./works.html", "slide_out_left");
 
 // glovalNav ****************************************
 import { globalNav } from './globalNav/globalNav.js';

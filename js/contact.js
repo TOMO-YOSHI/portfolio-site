@@ -1,9 +1,9 @@
 // PageTransitionAnimation ****************************************
 import { pageTransitionAnimationWithArguments, pageSlideTransitionAnimationWithArguments } from './pageTransition/pageTransitionAnimation.js';
 
-// pageTransitionAnimationWithArguments("#go_to_portfolio", "#contact_body", "./portfolio.html");
+// pageTransitionAnimationWithArguments("#go_to_works", "#contact_body", "./works.html");
 
-pageSlideTransitionAnimationWithArguments("#go_to_portfolio", "#contact_main", "./portfolio.html", "slide_out_right");
+pageSlideTransitionAnimationWithArguments("#go_to_works", "#contact_main", "./works.html", "slide_out_right");
 // pageSlideTransitionAnimationWithArguments("#go_to_skill", "#profile_body", "./profile.html");
 
 
