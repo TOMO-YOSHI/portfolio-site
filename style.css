@@ -1708,17 +1708,6 @@ body {
   max-width: 1000px;
 }
 
-@media screen and (min-width: 479px) {
-  #contact_main {
-    height: 100vh;
-  }
-}
-
-#contact_main h2 {
-  letter-spacing: .1rem;
-  font-size: 2rem;
-}
-
 #contact_main_title {
   font-size: 3rem;
   text-shadow: 0 0 3px #00FF00;
@@ -1743,8 +1732,8 @@ body {
 #contact_form label {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 140px 1fr;
-      grid-template-columns: 140px 1fr;
+  -ms-grid-columns: 120px 1fr;
+      grid-template-columns: 120px 1fr;
   margin-bottom: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1753,30 +1742,31 @@ body {
 
 #contact_form label span {
   font-family: "digit", sans-serif;
-  text-shadow: 0 0 3px orange;
   letter-spacing: .1rem;
   color: orange;
+  color: #00FF00;
+  text-shadow: 0 0 3px #00FF00;
 }
 
 #contact_form label input {
   background-color: #101010;
   border: none;
-  border-bottom: orange solid 1px;
+  border-bottom: #00FF00 solid 1px;
   color: #dddddd;
   padding: .5rem;
   font-size: 18px;
 }
 
 #contact_form label input:focus {
-  outline: 1px solid orange !important;
-  -webkit-box-shadow: 0px 0px 15px 0px orange;
-  box-shadow: 0px 0px 15px 0px orange;
+  outline: 1px solid #00FF00 !important;
+  -webkit-box-shadow: 0px 0px 15px 0px lime;
+  box-shadow: 0px 0px 15px 0px lime;
 }
 
 #contact_form label textarea {
   background-color: #101010;
   border: none;
-  border: orange solid 1px;
+  border: #00FF00 solid 1px;
   color: #dddddd;
   padding: .5rem;
   font-size: 18px;
@@ -1784,87 +1774,31 @@ body {
 }
 
 #contact_form label textarea:focus {
-  outline: 1px solid orange !important;
-  -webkit-box-shadow: 0px 0px 15px 0px orange;
-  box-shadow: 0px 0px 15px 0px orange;
+  outline: 1px solid #00FF00 !important;
+  -webkit-box-shadow: 0px 0px 15px 0px lime;
+  box-shadow: 0px 0px 15px 0px lime;
 }
 
 #contact_form button {
   font-family: "digit", sans-serif;
   letter-spacing: .1rem;
-  color: #101010;
+  color: orange;
+  text-shadow: 0 0 5px orange;
   border: orange 1px solid;
   padding: .5rem;
-  background-color: orange;
+  margin-top: 1.75rem;
+  background-color: transparent;
   cursor: pointer;
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  -webkit-box-shadow: 0px 0px 3px 0px orange;
-  box-shadow: 0px 0px 3px 0px orange;
+  -webkit-box-shadow: 0px 0px 15px 0px orange;
+  box-shadow: 0px 0px 15px 0px orange;
 }
 
 #contact_form button:hover {
   background-color: transparent;
-  color: orange;
-  text-shadow: 0 0 5px orange;
-  -webkit-box-shadow: 0px 0px 15px 0px orange;
-          box-shadow: 0px 0px 15px 0px orange;
-}
-
-#about_div {
-  padding: 1rem;
-  position: relative;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  border: #00FF00 solid 2px;
-  -webkit-box-shadow: 0px 0px 3px 0px lime;
-  box-shadow: 0px 0px 3px 0px lime;
-}
-
-#about_div h2 {
-  position: absolute;
-  top: -3.25rem;
-  background-color: #101010;
-  padding: 0 .5rem;
-}
-
-#about_div p:first-of-type {
-  margin-bottom: 0;
-}
-
-#about_div p:last-of-type {
-  margin-top: 0;
-}
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-
-@keyframes backgroundImageSlideIn {
-  0% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-    opacity: １;
-  }
-}
-
-@keyframes backgroundImageFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: １;
-  }
+  color: #101010;
+  background-color: orange;
 }
 
 @media screen and (max-width: 479px) {
@@ -1880,6 +1814,15 @@ body {
   }
   #contact_main #contact_form label textarea {
     width: 96%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #contact_main_title {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
   }
 }
 

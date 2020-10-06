@@ -1,10 +1,4 @@
 #contact_body {
-    // background-image: url('../../sources/image/portrait_line_white_0025px.png');
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-size: auto 160%;
-    // background-position: 100px 50%;
-    // background-position: right;
     position: relative;
 }
 
@@ -31,14 +25,14 @@
     margin: 0 auto;
     max-width: 1000px;
 
-    @media screen and (min-width: 479px) {
-        height: 100vh;
-    }
+    // @media screen and (min-width: 479px) {
+    //     height: 100vh;
+    // }
 
-    h2 {
-        letter-spacing: .1rem;
-        font-size: 2rem;
-    }
+    // h2 {
+    //     letter-spacing: .1rem;
+    //     font-size: 2rem;
+    // }
 }
 
 #contact_main_title {
@@ -64,7 +58,7 @@
 
 #contact_form label{
     display: grid;
-    grid-template-columns: 140px 1fr;
+    grid-template-columns: 120px 1fr;
     margin-bottom: 2rem;
     align-items: center;
 }
@@ -72,26 +66,33 @@
 #contact_form label span{
     font-family: $font_digit;
     // color: $green;
-    text-shadow: 0 0 3px $orange;
+    // text-shadow: 0 0 3px $orange;
     letter-spacing: .1rem;
     color: $orange;
-    // color: $textWhite;
+
+    color: $green;
+    text-shadow: 0 0 3px $green;
 }
 
 #contact_form label input{
     background-color: $backgroundColorBlack;
     border: none;
-    border-bottom: $orange solid 1px;
     // border-bottom: $orange solid 1px;
+    border-bottom: $green solid 1px;
     color: $textWhite;
     padding: .5rem;
     font-size: 18px;
     &:focus {
-        outline: 1px solid $orange !important;
+        outline: 1px solid $green !important;
 
-        -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
-        -moz-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
-        box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0,255,0,1);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0,255,0,1);
+        box-shadow: 0px 0px 15px 0px rgba(0,255,0,1);
+        // outline: 1px solid $orange !important;
+
+        // -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+        // -moz-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+        // box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
 
         }
 }
@@ -99,102 +100,52 @@
 #contact_form label textarea{
     background-color: $backgroundColorBlack;
     border: none;
-    border: $orange solid 1px;
+    // border: $orange solid 1px;
+    border: $green solid 1px;
     color: $textWhite;
     padding: .5rem;
     font-size: 18px;
     height: 100px;
     &:focus {
-        outline: 1px solid $orange !important;
+        outline: 1px solid $green !important;
 
-        -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
-        -moz-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
-        box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0,255,0,1);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0,255,0,1);
+        box-shadow: 0px 0px 15px 0px rgba(0,255,0,1);
+
+        // outline: 1px solid $orange !important;
+
+        // -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+        // -moz-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+        // box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
     }
 }
 
 #contact_form button {
     font-family: $font_digit;
     letter-spacing: .1rem;
-    color: $backgroundColorBlack;
+    color: $orange;
+    text-shadow: 0 0 5px $orange;
+    // color: $backgroundColorBlack;
     border: $orange 1px solid;
     padding: .5rem;
-    background-color: $orange;
+    margin-top: 1.75rem;
+    background-color: transparent;
+    // background-color: $orange;
     cursor: pointer;
     transition: .5s ease;
+    // width: 50%;
+    // margin: 0 auto;
 
-    -webkit-box-shadow: 0px 0px 3px 0px rgba(255, 165, 0, 1);
-    -moz-box-shadow: 0px 0px 3px 0px rgba(255, 165, 0, 1);
-    box-shadow: 0px 0px 3px 0px rgba(255, 165, 0, 1);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+    box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
 
     &:hover {
         background-color: transparent;
-        color: $orange;
-        text-shadow: 0 0 5px $orange;
-        box-shadow: 0px 0px 15px 0px rgba(255, 165, 0, 1);
+        color: $backgroundColorBlack;
+        background-color: $orange;
     }
-}
-
-// #contact_form label:nth-of-type(1) input{
-//     background-color: $backgroundColorBlack;
-//     border: none;
-//     border-bottom: $orange solid 1px;
-//     color: $textWhite;
-//     &:focus {
-//         outline: none !important;
-//         border:1px solid $orange;
-
-//         -webkit-box-shadow: 0px 0px 3px 0px rgba(255, 165, 0, 1);
-//         -moz-box-shadow: 0px 0px 3px 0px rgba(255, 165, 0, 1);
-//         box-shadow: 0px 0px 3px 0px rgba(255, 165, 0, 1);
-
-//         }
-// }
-
-#about_div {
-    padding: 1rem;
-    position: relative;
-    transition: 1s ease;
-
-    border: $green solid 2px;
-    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
-    -moz-box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
-    box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
-
-    h2 {
-        position: absolute;
-        top: -3.25rem;
-        background-color: #101010;
-        padding: 0 .5rem;
-    }
-
-    p:first-of-type {
-        margin-bottom: 0;
-    }
-
-    p:last-of-type {
-        margin-top: 0;
-    }
-
-    // .orange {
-    //     color: $orange;
-    // }
-}
-
-// animation ******************************************************
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
-
-@keyframes backgroundImageSlideIn {
-  0% { transform: translateX(50%); opacity: 0 }
-  100% { transform: translateX(0%); opacity: １ }
-}
-@keyframes backgroundImageFadeIn {
-  0% { opacity: 0 }
-  100% { opacity: １ }
 }
 
 // Mobile layput
@@ -217,6 +168,19 @@
                width: 96%;
            }
        }
+
+    //    #contact_form button {
+    //        width: 100%;
+    //    }
     }
 }
+
+@media screen and (max-width: 575px) {
+    #contact_main_title {
+            font-size: 2.5rem;
+            margin-bottom: 0;
+            transition: 1s ease;
+    }
+}
+
 
