@@ -142,6 +142,12 @@ $portraitOpacity: .35;
     animation: portraitSlideIn_2 1.5s ease;
 }
 
+@-moz-document url-prefix() {
+.index_portrait_line {
+  display: none;
+}
+}
+
 #skip_animation {
   position: fixed;
   bottom: 1rem;
