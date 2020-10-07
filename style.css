@@ -1898,6 +1898,15 @@ body {
   position: relative;
 }
 
+#each_work_body h1 {
+  margin-bottom: 1rem;
+}
+
+#each_work_body h2 {
+  margin-top: 0;
+  grid-column: span 2;
+}
+
 #each_work_body::after {
   content: "";
   background-image: url("../../sources/image/portrait_line_white_0025px.png");
@@ -1946,11 +1955,9 @@ body {
 }
 
 #video_div {
-  padding: 1rem;
   position: relative;
   -webkit-transition: 1s ease;
   transition: 1s ease;
-  max-width: 600px;
 }
 
 #video_div h2 {
@@ -1960,12 +1967,13 @@ body {
   padding: 0 .5rem;
 }
 
-#video_div p:first-of-type {
-  margin-bottom: 0;
+#video_div p {
+  margin: 0 0 .5rem;
+  color: orange;
 }
 
-#video_div p:last-of-type {
-  margin-top: 0;
+#video_div img {
+  border: 0.25px solid #dddddd;
 }
 
 .each_work_description {
@@ -2041,6 +2049,19 @@ body {
   }
   100% {
     opacity: １;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #each_work_body {
+    padding: 0 2rem;
+  }
+  #each_work_main {
+    display: unset;
+    padding-left: 0;
+  }
+  #video_div {
+    margin-bottom: 1.25rem;
   }
 }
 
