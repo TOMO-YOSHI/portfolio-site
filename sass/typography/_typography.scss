@@ -1,6 +1,9 @@
 @font-face {
 	font-family: 'digit';
-	src: url(../../sources/font/Digit.ttf);
+    src:
+    url(../sources/font/Digit.ttf),
+    url(../sources/font/Digit.woff),
+    url(../sources/font/Digit.woff2);
 }
 
 $font_digit: 'digit', sans-serif;

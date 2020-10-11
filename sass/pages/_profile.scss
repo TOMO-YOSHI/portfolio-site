@@ -1,16 +1,10 @@
 #profile_body {
-    // background-image: url('../../sources/image/portrait_line_white_0025px.png');
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-size: auto 160%;
-    // background-position: 100px 50%;
-    // background-position: right;
     position: relative;
 }
 
 #profile_body::after {
     content: "";
-    background-image: url('../../sources/image/portrait_line_white_0025px.png');
+    background-image: url('./sources/image/portrait_line_white_0025px.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto 160%;
@@ -43,7 +37,7 @@
 
 #profile_main_title {
     font-size: 3rem;
-    text-shadow: 0 0 3px $green;
+    text-shadow: 0 0 3px green;
     // border-right: .3rem solid orange; /* The typwriter cursor */
     padding-right: .5rem;
     animation: blink-caret 1s step-start infinite;
@@ -57,7 +51,7 @@
     position: relative;
     transition: 1s ease;
 
-    border: $green solid 2px;
+    border: green solid 2px;
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
     -moz-box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
     box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
