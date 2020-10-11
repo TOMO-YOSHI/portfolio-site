@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 export function globalMenuOpen() {
     $(document).ready(function () {
         $('#nav-icon').click(function () {

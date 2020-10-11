@@ -1,16 +1,10 @@
 #skills_body {
-    // background-image: url('../../sources/image/portrait_line_white_0025px.png');
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-size: auto 160%;
-    // background-position: 100px 50%;
-    // background-position: right;
     position: relative;
 }
 
 #skills_body::after {
     content: "";
-    background-image: url('../../sources/image/portrait_line_white_0025px.png');
+    background-image: url('./sources/image/portrait_line_white_0025px.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto 160%;

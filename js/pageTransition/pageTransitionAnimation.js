@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 // PageTransitionAnimation ****************************************
 
 export function pageTransitionAnimation () {

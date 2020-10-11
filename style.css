@@ -344,7 +344,7 @@ template {
 
 @font-face {
   font-family: 'digit';
-  src: url(../../sources/font/Digit.ttf);
+  src: url(./sources/font/Digit.ttf), url(./sources/font/Digit.woff), url(./sources/font/Digit.woff2);
 }
 
 h1, h2 {
@@ -1158,7 +1158,7 @@ body {
 
 #profile_body::after {
   content: "";
-  background-image: url("../../sources/image/portrait_line_white_0025px.png");
+  background-image: url("./sources/image/portrait_line_white_0025px.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto 160%;
@@ -1302,7 +1302,7 @@ body {
 
 #skills_body::after {
   content: "";
-  background-image: url("../../sources/image/portrait_line_white_0025px.png");
+  background-image: url("./sources/image/portrait_line_white_0025px.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto 160%;
@@ -1695,7 +1695,7 @@ body {
 
 #works_body::after {
   content: "";
-  background-image: url("../../sources/image/portrait_line_white_0025px.png");
+  background-image: url("./sources/image/portrait_line_white_0025px.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto 160%;
@@ -1909,7 +1909,7 @@ body {
 
 #each_work_body::after {
   content: "";
-  background-image: url("../../sources/image/portrait_line_white_0025px.png");
+  background-image: url("./sources/image/portrait_line_white_0025px.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto 160%;
@@ -2090,7 +2090,7 @@ body {
 
 #contact_body::after {
   content: "";
-  background-image: url("../../sources/image/portrait_line_white_0025px.png");
+  background-image: url("./sources/image/portrait_line_white_0025px.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto 160%;

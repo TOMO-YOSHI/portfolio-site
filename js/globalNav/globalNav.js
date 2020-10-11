@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 // hamburgerMenuEffect ****************************************
 import { hamburgerMenuEffect } from './hamburgerMenu.js';
 import { globalMenuOpen } from './globalMenuOpen.js';

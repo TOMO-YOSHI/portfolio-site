@@ -1,3 +1,6 @@
+import $ from "jquery";
+import '../style.css';
+
 // PageTransitionAnimation ****************************************
 import { pageTransitionAnimationWithArguments, pageSlideTransitionAnimationWithArguments } from './pageTransition/pageTransitionAnimation.js';
 
