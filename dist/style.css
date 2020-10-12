@@ -1190,7 +1190,7 @@ body {
 
 #profile_main_title {
   font-size: 3rem;
-  text-shadow: 0 0 3px #00FF00;
+  text-shadow: 0 0 3px green;
   padding-right: .5rem;
   -webkit-animation: blink-caret 1s step-start infinite;
           animation: blink-caret 1s step-start infinite;
@@ -1204,7 +1204,7 @@ body {
   position: relative;
   -webkit-transition: 1s ease;
   transition: 1s ease;
-  border: #00FF00 solid 2px;
+  border: green solid 2px;
   -webkit-box-shadow: 0px 0px 3px 0px lime;
   box-shadow: 0px 0px 3px 0px lime;
 }
@@ -2057,8 +2057,9 @@ body {
     padding: 0 2rem;
   }
   #each_work_main {
-    display: unset;
+    display: block;
     padding-left: 0;
+    padding-right: 0;
   }
   #video_div {
     margin-bottom: 1.25rem;

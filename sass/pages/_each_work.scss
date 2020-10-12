@@ -174,9 +174,10 @@
     }
 
     #each_work_main {
-        display: unset;
+        display: block;
         // grid-template-columns: 1fr;
         padding-left: 0;
+        padding-right: 0;
     }
 
     #video_div {
