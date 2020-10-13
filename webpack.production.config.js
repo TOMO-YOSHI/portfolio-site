@@ -77,60 +77,60 @@ module.exports = {
   },
   plugins: [
     // Each time when we run build, inside of the path directory will be cleaned up
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [
-        "**/*",
-        // Cleaning up build folder
-        path.join(process.cwd(), "build/**/*"),
-      ],
-    }),
+    // new CleanWebpackPlugin({
+    //   cleanOnceBeforeBuildPatterns: [
+    //     "**/*",
+    //     // Cleaning up build folder
+    //     path.join(process.cwd(), "build/**/*"),
+    //   ],
+    // }),
     new MiniCssExtractPlugin({
       filename: "style.css",
       // filename: "style.[contenthash].css",
       // following is for multi page
       // filename: "[name].[contenthash].css",
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: "index.html",
-    //   chunks: ["index"],
-    //   title: "TOMO's Portfolio",
-    //   template: "./index.hbs",
-    //   description: "This is an index page of TOMO's portfolio",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: "profile.html",
-    //   chunks: ["profile"],
-    //   title: "TOMO's Portfolio",
-    //   template: "./profile.hbs",
-    //   description: "This is a profile page of TOMO's portfolio",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: "skills.html",
-    //   chunks: ["skills"],
-    //   title: "TOMO's Portfolio",
-    //   template: "./skills.hbs",
-    //   description: "This is a skills page of TOMO's portfolio",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: "works.html",
-    //   chunks: ["works"],
-    //   title: "TOMO's Portfolio",
-    //   template: "./works.hbs",
-    //   description: "This is a works page of TOMO's portfolio",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: "each_work.html",
-    //   chunks: ["each_work"],
-    //   title: "TOMO's Portfolio",
-    //   template: "./each_work.hbs",
-    //   description: "This is a each-work page of TOMO's portfolio",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: "contact.html",
-    //   chunks: ["contact"],
-    //   title: "TOMO's Portfolio",
-    //   template: "./contact.hbs",
-    //   description: "This is a contact page of TOMO's portfolio",
-    // }),
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      chunks: ["index"],
+      title: "TOMO's Portfolio",
+      template: "./index.hbs",
+      description: "This is an index page of TOMO's portfolio",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "profile.html",
+      chunks: ["profile"],
+      title: "TOMO's Portfolio",
+      template: "./profile.hbs",
+      description: "This is a profile page of TOMO's portfolio",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "skills.html",
+      chunks: ["skills"],
+      title: "TOMO's Portfolio",
+      template: "./skills.hbs",
+      description: "This is a skills page of TOMO's portfolio",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "works.html",
+      chunks: ["works"],
+      title: "TOMO's Portfolio",
+      template: "./works.hbs",
+      description: "This is a works page of TOMO's portfolio",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "each_work.html",
+      chunks: ["each_work"],
+      title: "TOMO's Portfolio",
+      template: "./each_work.hbs",
+      description: "This is a each-work page of TOMO's portfolio",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contact.html",
+      chunks: ["contact"],
+      title: "TOMO's Portfolio",
+      template: "./contact.hbs",
+      description: "This is a contact page of TOMO's portfolio",
+    }),
   ],
 };

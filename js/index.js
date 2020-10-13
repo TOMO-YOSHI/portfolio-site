@@ -1,5 +1,4 @@
-// import '../style.css';
-// import '../sass/pages/_profile.scss';
+import '../style.css';
 
 // flashPageAnimation ****************************************
 import { flashPageAnimation } from './flashPageAnimation.js';
