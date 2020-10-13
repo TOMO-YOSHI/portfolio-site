@@ -31,43 +31,44 @@ const client = contentful.createClient({
 //   console.log(entry.fields.workName);
 // });
 
+
 client
   .getEntries({
     content_type: "portfolio",
     "fields.workType[in]": "Personal",
+    order: "fields.workName",
   })
   .then((response) => {
     console.log(response.items);
-    // console.log(response.items[0].sys.id);
-    // console.log(response.items[0].fields);
     response.items.map((item) => {
-      console.log(item)
+      // console.log(item);
       const asset = client
         .getAsset(item.fields.image[0].sys.id)
         .then((asset) => {
           const imageUrl = "https:" + asset.fields.file.url;
           // console.log(imageUrl);
 
-          let coreTechnology = ``;item.fields.coreTechnology.map(item => {
+          let coreTechnology = ``;
+          item.fields.coreTechnology.map((item) => {
             coreTechnology += `<li>&nbsp;${item}</li>`;
-          })
+          });
 
           // console.log(coreTechnology);
 
-          let workName = item.fields.workName.toLowerCase();
+          let workName = item.fields.workName;
 
-          if (workName.indexOf(" ") > -1) {
+          if (workName.indexOf("_") > -1) {
             workName =
-              workName.slice(0, workName.indexOf(" "))
-              + "_" +
-              workName.slice(workName.indexOf(" ") + 1);
+              workName.slice(0, workName.indexOf("_")) +
+              " " +
+              workName.slice(workName.indexOf("_") + 1);
           }
 
-          console.log(workName);
+          // console.log(workName);
 
-          const eachWork = `
+          let eachWork = `
             <div class="each_work">
-                <h3>${item.fields.workName}</h3>
+                <h3>${workName}</h3>
                 <img src="${imageUrl}" alt="${asset.fields.title}">
                 <div class="work_description">
                     <p>Core technology</p>
@@ -75,7 +76,7 @@ client
                     ${coreTechnology}
                     </ul>
                 </div>
-                <a href="./each_work.html?category=${item.fields.workType}?title=${workName}">
+                <a href="./each_work.html?title=${workName}">
                     <div class="see_more">
                         <p>See more</p>
                     </div>
@@ -85,6 +86,6 @@ client
 
           $("#personal_works").append(eachWork);
         });
-    })
+    });
   })
   .catch(console.error);

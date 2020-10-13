@@ -1,7 +1,7 @@
 import '../style.css';
 
 // flashPageAnimation ****************************************
-import { flashPageAnimation } from './flashPageAnimation.js';
+import { flashPageAnimation } from './flashPageAnimation/flashPageAnimation.js';
 
 flashPageAnimation(2.5);
 
