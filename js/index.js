@@ -1,4 +1,4 @@
-import '../style.css';
+// import '../style.css';
 // import '../sass/pages/_profile.scss';
 
 // flashPageAnimation ****************************************
