@@ -17,6 +17,10 @@
     background-position: right;
     // animation: backgroundImageFadeIn 2s ease;
     z-index: -1;
+
+    @media screen and (max-width: 575px) {
+        display: none;
+    }
 }
 
 #works_main {
