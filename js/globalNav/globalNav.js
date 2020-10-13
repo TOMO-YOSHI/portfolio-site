@@ -1,4 +1,4 @@
-// import $ from "jquery";
+import $ from "jquery";
 
 // hamburgerMenuEffect ****************************************
 import { hamburgerMenuEffect } from './hamburgerMenu.js';
