@@ -1,4 +1,7 @@
 import '../style.css';
+import $ from "jquery";
+
+const contentful = require("contentful");
 
 // PageTransitionAnimation ****************************************
 import { pageTransitionAnimationWithArguments, pageSlideTransitionAnimationWithArguments } from './pageTransition/pageTransitionAnimation.js';
@@ -30,10 +33,87 @@ const client = contentful.createClient({
 //   console.log(entry.fields.workName);
 // });
 
+// client
+//   .getEntries({
+//     content_type: "portfolio",
+//     "fields.workName[in]": "BBS",
+//   })
+//   .then((response) => console.log(response.items))
+//   .catch(console.error);
+
+const queryString = window.location.search;
+// console.log(queryString);
+
+const urlParams = new URLSearchParams(queryString);
+
+let title = urlParams.get("title");
+console.log(title);
+
+if (title.indexOf(" ") > -1) {
+  title =
+    title.slice(0, title.indexOf(" ")) +
+    "_" +
+    title.slice(title.indexOf(" ") + 1);
+}
+
 client
   .getEntries({
     content_type: "portfolio",
-    "fields.workName[in]": "BBS",
+    "fields.workName[in]": title,
   })
-  .then((response) => console.log(response.items))
+  .then((response) => {
+    console.log(response.items);
+    response.items.map((item) => {
+      // console.log(item);
+      const asset = client
+        .getAsset(item.fields.image[0].sys.id)
+        .then((asset) => {
+          const imageUrl = "https:" + asset.fields.file.url;
+          // console.log(imageUrl);
+
+          let coreTechnology = ``;
+          item.fields.coreTechnology.map((item) => {
+            coreTechnology += `<li>&nbsp;${item}</li>`;
+          });
+
+          // console.log(coreTechnology);
+
+          let workName = item.fields.workName;
+
+          if (workName.indexOf("_") > -1) {
+            workName =
+              workName.slice(0, workName.indexOf("_")) +
+              " " +
+              workName.slice(workName.indexOf("_") + 1);
+          }
+
+          // console.log(workName);
+
+          let eachWork = `
+            <h1 id="each_work_main_title">Protfolio</h1>
+            <h2>${workName}</h2>
+            <div id="video_div">
+                <p>Demo Video</p>
+                <img src="${imageUrl}" alt="${workName}">
+            </div>
+            <div class="each_work_description">
+                <p class="orange">Core technology</p>
+                <ul>
+                    ${coreTechnology}
+                </ul>
+
+                <p class="about_this_work">About this Work</p>
+                <p>${item.fields.aboutThisWork}</p>
+
+                <div class="work_links">
+                    <p><a href="${item.fields.webPageUrl}">Visit the Actual Web Page</a></p>
+                    <p><a href="${item.fields.githubUrl}">Look into the Code (Go to GitHub)</a></p>
+                </div>
+            </div>
+          `;
+
+          $("#each_work_main").prepend(eachWork);
+        });
+    });
+  })
   .catch(console.error);
