@@ -5,7 +5,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  // entry: "./src/index.js",
   entry: {
     index: "./js/index.js",
     profile: "./js/profile.js",
@@ -28,10 +27,10 @@ module.exports = {
     index: "index.html",
     port: 9000,
   },
-  resolve: {
-    modules: ["js", "node_modules"],
-    extensions: [".ts", ".js", "json"],
-  },
+  // resolve: {
+  //   modules: ["js", "node_modules"],
+  //   extensions: [".ts", ".js", "json"],
+  // },
   module: {
     rules: [
       // {
@@ -44,18 +43,6 @@ module.exports = {
         test: /\.(png|jpg|svg)$/,
         include: path.join(__dirname, "sources/image"),
         use: ["file-loader"],
-        // use: ["url-loader"],
-        // use: ["file-loader", "url-loader"],
-        // use: [
-        //   {
-        //     loader: "file-loader",
-        //     options: {
-        //       limit: 8000,
-        //       name: "sources/image/[name].[ext]",
-        //       // name: 'image/[hash]-[name].[ext]'
-        //     },
-        //   },
-        // ],
       },
       {
         test: /\.css$/,
@@ -84,15 +71,6 @@ module.exports = {
       {
         test: /\.(woff2|woff|ttf)$/,
         use: ["file-loader"],
-        // use: [
-        //   {
-        //     loader: "file-loader",
-        //     options: {
-        //       name: "[name].[ext]",
-        //       outputPath: "sources/font/",
-        //     },
-        //   },
-        // ],
       },
     ],
   },
