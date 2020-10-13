@@ -795,6 +795,7 @@ body {
 
 #index_main {
   height: 100vh;
+  width: 100vw;
   background-color: #101010;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -920,12 +921,21 @@ body {
 }
 
 .index_portrait_line {
+  top: 0;
+  left: 100%;
+  overflow: hidden;
   height: 100%;
   position: absolute;
   -webkit-animation-delay: 2.5s !important;
           animation-delay: 2.5s !important;
   -webkit-animation: portraitSlideIn_2 1.5s ease;
           animation: portraitSlideIn_2 1.5s ease;
+}
+
+@media screen and (max-width: 575px) {
+  .index_portrait_line {
+    display: none;
+  }
 }
 
 @-moz-document url-prefix() {
@@ -1171,6 +1181,12 @@ body {
   z-index: -1;
 }
 
+@media screen and (max-width: 575px) {
+  #profile_body::after {
+    background-size: cover;
+  }
+}
+
 #profile_main {
   padding: 2.2rem 2rem 0;
   margin: 0 auto;
@@ -1313,6 +1329,12 @@ body {
   left: 0px;
   background-position: right;
   z-index: -1;
+}
+
+@media screen and (max-width: 575px) {
+  #skills_body::after {
+    background-size: cover;
+  }
 }
 
 #skills_main {
@@ -1708,6 +1730,12 @@ body {
   z-index: -1;
 }
 
+@media screen and (max-width: 575px) {
+  #works_body::after {
+    display: none;
+  }
+}
+
 #works_main {
   padding: 2.2rem 2rem 0;
   margin: 0 auto;
@@ -1923,6 +1951,12 @@ body {
   z-index: -1;
 }
 
+@media screen and (max-width: 575px) {
+  #each_work_body::after {
+    display: none;
+  }
+}
+
 #each_work_main {
   padding: 2.2rem 2rem 0;
   margin: 0 auto;
@@ -2103,6 +2137,12 @@ body {
   left: 0px;
   background-position: right;
   z-index: -1;
+}
+
+@media screen and (max-width: 575px) {
+  #contact_body::after {
+    background-size: cover;
+  }
 }
 
 #contact_main {
