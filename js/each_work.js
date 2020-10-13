@@ -1,4 +1,4 @@
-import '../style.css';
+// import '../style.css';
 
 // PageTransitionAnimation ****************************************
 import { pageTransitionAnimationWithArguments, pageSlideTransitionAnimationWithArguments } from './pageTransition/pageTransitionAnimation.js';
@@ -15,7 +15,7 @@ import { globalNav } from './globalNav/globalNav.js';
 globalNav("profile");
 
 // Get Content **************************************
-const contentful = require("contentful");
+// const contentful = require("contentful");
 
 const client = contentful.createClient({
   space: "cggsnbtxpwpk",

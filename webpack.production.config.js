@@ -25,14 +25,8 @@ module.exports = {
   mode: "production",
   module: {
     rules: [
-      // {
-      //     test: /\.(xml)$/,
-      //     use: [
-      //         'xml-loader'
-      //     ]
-      // },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|svg)$/,
         include: path.join(__dirname, "sources/image"),
         use: ["file-loader"],
         // use: ["url-loader"],
@@ -83,13 +77,13 @@ module.exports = {
   },
   plugins: [
     // Each time when we run build, inside of the path directory will be cleaned up
-    // new CleanWebpackPlugin({
-    //   cleanOnceBeforeBuildPatterns: [
-    //     "**/*",
-    //     // Cleaning up build folder
-    //     path.join(process.cwd(), "build/**/*"),
-    //   ],
-    // }),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [
+        "**/*",
+        // Cleaning up build folder
+        path.join(process.cwd(), "build/**/*"),
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: "style.css",
       // filename: "style.[contenthash].css",
