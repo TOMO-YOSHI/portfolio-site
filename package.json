@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is Tomo's portfolio site.",
   "main": "index.js",
-  "homepage": "https://github.com/TOMO-YOSHI/portfolio-site#readme",
+  "homepage": "https://github.com/TOMO-YOSHI/portfolio-site",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",

@@ -2258,6 +2258,9 @@ body {
   #contact_main #contact_form label textarea {
     width: 96%;
   }
+  #contact_main #contact_form label input {
+    border: #00FF00 solid 1px;
+  }
 }
 
 @media screen and (max-width: 575px) {
