@@ -15,7 +15,9 @@
 // Animation class
 
 .shut_down {
-    animation: shutDown 1.5s ease; // pageTransitionAnimation should be modified if the animation duration is changed.
+    animation: shutDown 1.8s ease;
+    // animation: shutDown 1.5s ease;
+    // pageTransitionAnimation should be modified if the animation duration is changed.
 }
 
 .set_up {
@@ -59,7 +61,8 @@
 // }
 
 .slide_out_left {
-    animation: slideOutLeft .45s ease;
+    animation: slideOutLeft .75s ease;
+    // animation: slideOutLeft .45s ease;
 }
 
 @keyframes slideOutLeft {
@@ -77,7 +80,8 @@
 }
 
 .slide_out_right {
-    animation: slideOutRight .45s ease;
+    animation: slideOutRight .75s ease;
+    // animation: slideOutRight .45s ease;
 }
 
 @keyframes slideOutRight {
