@@ -9,6 +9,7 @@ app.use(express.static('public'));
 
 // Port website will run on
 app.listen(8080);
+console.log("App listening on port 8080!");
 
 // *** GET Routes - display pages ***
 // Root Route
