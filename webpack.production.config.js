@@ -17,8 +17,8 @@ module.exports = {
   output: {
     // Following is for multi page app
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "./dist"),
-    // publicPath: "dist/",
+    path: path.resolve(__dirname, "./public"),
+    // publicPath: "public/",
     // If using HtmlWebpackPlugin, publicPath should be ""
     publicPath: "",
   },
