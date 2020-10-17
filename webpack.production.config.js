@@ -1,11 +1,9 @@
 const path = require("path");
-// const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  // entry: "./src/index.js",
   entry: {
     index: "./js/index.js",
     profile: "./js/profile.js",
@@ -15,7 +13,6 @@ module.exports = {
     contact: "./js/contact.js",
   },
   output: {
-    // Following is for multi page app
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "./public"),
     // publicPath: "public/",
@@ -29,26 +26,12 @@ module.exports = {
         test: /\.(png|jpg|svg)$/,
         include: path.join(__dirname, "sources/image"),
         use: ["file-loader"],
-        // use: ["url-loader"],
-        // use: ["file-loader", "url-loader"],
-        // use: [{
-        //   loader: 'file-loader',
-        //   options: {
-        //     limit: 8000,
-        //     name: 'sources/image/[name].[ext]'
-        //     // name: 'image/[hash]-[name].[ext]'
-        //   }
-        // }]
       },
       {
         test: /\.css$/,
         // use: ["style-loader", "css-loader"],
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
-      // {
-      //   test: /\.scss$/,
-      //   use: ["style-loader", "css-loader", "sass-loader"],
-      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -63,15 +46,6 @@ module.exports = {
       {
         test: /\.(woff2|woff|ttf)$/,
         use: ["file-loader"],
-        // use: [
-        //   {
-        //     loader: 'file-loader',
-        //     options: {
-        //       name: "[name].[ext]",
-        //       outputPath: "sources/font/",
-        //     },
-        //   },
-        // ],
       },
     ],
   },

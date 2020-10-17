@@ -1,7 +1,5 @@
 const path = require('path');
-// const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -14,7 +12,6 @@ module.exports = {
     contact: "./js/contact.js",
   },
   output: {
-    // Following is for multi page app
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "./public"),
     // publicPath: "public/",
@@ -27,18 +24,8 @@ module.exports = {
     index: "index.html",
     port: 9000,
   },
-  // resolve: {
-  //   modules: ["js", "node_modules"],
-  //   extensions: [".ts", ".js", "json"],
-  // },
   module: {
     rules: [
-      // {
-      //     test: /\.(xml)$/,
-      //     use: [
-      //         'xml-loader'
-      //     ]
-      // },
       {
         test: /\.(png|jpg|svg)$/,
         include: path.join(__dirname, "sources/image"),
@@ -46,13 +33,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        // use: ["style-loader", "css-loader"],
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: ["style-loader", "css-loader"],
+        // use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
-      // {
-      //   test: /\.scss$/,
-      //   use: ["style-loader", "css-loader", "sass-loader"],
-      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -75,19 +58,8 @@ module.exports = {
     ],
   },
   plugins: [
-    // Each time when we run build, inside of the path directory will be cleaned up
-    // new CleanWebpackPlugin({
-    //   cleanOnceBeforeBuildPatterns: [
-    //     "**/*",
-    //     // Cleaning up build folder
-    //     path.join(process.cwd(), "build/**/*"),
-    //   ],
-    // }),
     new MiniCssExtractPlugin({
       filename: "style.css",
-      // filename: "style.[contenthash].css",
-      // following is for multi page
-      // filename: "[name].[contenthash].css",
     }),
     new HtmlWebpackPlugin({
       filename: "index.html",
