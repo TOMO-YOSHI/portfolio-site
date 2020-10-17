@@ -1860,29 +1860,39 @@ body {
   content: "";
 }
 
-#about_div {
-  padding: 1rem;
-  position: relative;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  border: #00FF00 solid 2px;
-  -webkit-box-shadow: 0px 0px 3px 0px lime;
-  box-shadow: 0px 0px 3px 0px lime;
+.loader {
+  border: 5px solid #f3f3f3;
+  /* Light grey */
+  border-top: 5px solid grey;
+  /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1.5s linear infinite;
+          animation: spin 1.5s linear infinite;
+  margin: 2rem auto;
 }
 
-#about_div h2 {
-  position: absolute;
-  top: -3.25rem;
-  background-color: #101010;
-  padding: 0 .5rem;
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
-#about_div p:first-of-type {
-  margin-bottom: 0;
-}
-
-#about_div p:last-of-type {
-  margin-top: 0;
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 767px) {

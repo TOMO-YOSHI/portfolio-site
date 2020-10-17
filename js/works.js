@@ -84,6 +84,8 @@ client
             </div>
           `;
 
+          $("#personal_works").removeClass("loader");
+
           $("#personal_works").append(eachWork);
         });
     });

@@ -2,9 +2,7 @@ import $ from "jquery";
 import '../style.css';
 
 // PageTransitionAnimation ****************************************
-import { pageTransitionAnimationWithArguments, pageSlideTransitionAnimationWithArguments } from './pageTransition/pageTransitionAnimation.js';
-
-// pageTransitionAnimationWithArguments("#go_to_welcom", "#profile_body", "./index.html");
+import {  pageSlideTransitionAnimationWithArguments } from './pageTransition/pageTransitionAnimation.js';
 
 pageSlideTransitionAnimationWithArguments("#go_to_profile", "#skills_main", "./profile.html", "slide_out_right");
 
@@ -28,13 +26,9 @@ $('#hard_skills_div .skills_open_close').click(function () {
 
 $("#skills-nav li").click(function(){
     $("#skills-nav li span").addClass('visibility_hidden');
-    // $("#skills-nav li").removeClass('orange');
 
     console.log($(this).text());
     let selectedSkill = $(this).text();
-    // console.log(selectedSkill);
-    // console.log(selectedSkill.indexOf(" "));
-    // console.log(selectedSkill.lastIndexOf(" ") === 1 ? undefined : selectedSkill.lastIndexOf(" "));
     selectedSkill = selectedSkill.slice(
         selectedSkill.indexOf(" ") + 1, 
         selectedSkill.lastIndexOf(" ") === 1 ? undefined : selectedSkill.lastIndexOf(" ")

@@ -14,8 +14,6 @@ body {
     h1 {
         margin: 0;
         display: inline-block;
-        // font-size: 2.5rem;
-        // text-shadow: 0 0 3px $green, 0 0 5px #0000FF;
     }
 
     p,
@@ -210,15 +208,6 @@ $portraitOpacity: .35;
   100% { transform: translateY(10px); opacity: 1 }
 }
 
-// @keyframes shake {
-//   0% { transform: skewX(-10deg); }
-//   5% { transform: skewX(10deg); }
-//   10% { transform: skewX(-10deg); }
-//   15% { transform: skewX(10deg); }
-//   20% { transform: skewX(0deg); }
-//   100% { transform: skewX(0deg); }  
-// }
-
 @keyframes shake {
   0% { transform: skewX(-100deg); }
   5% { transform: skewX(100deg); }
@@ -227,12 +216,3 @@ $portraitOpacity: .35;
   20% { transform: skewX(0deg); }
   100% { transform: skewX(0deg); }  
 }
-
-// @keyframes shakeTransition {
-//   0% { transform: skewX(-5deg); }
-//   5% { transform: skewX(5deg); }
-//   10% { transform: skewX(-5deg); }
-//   15% { transform: skewX(5deg); }
-//   20% { transform: skewX(0deg); }
-//   100% { transform: skewX(0deg); }  
-// }
