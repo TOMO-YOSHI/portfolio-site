@@ -17,14 +17,12 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto 160%;
-    // background-position: 100px 50%;
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
     background-position: right;
-    // animation: backgroundImageFadeIn 2s ease;
     z-index: -1;
 
     @media screen and (max-width: 575px) {
@@ -33,17 +31,12 @@
 }
 
 #each_work_main {
-    // height: 100vh;
     padding: 2.2rem 2rem 0;
     margin: 0 auto;
     max-width: 1000px;
     display: grid;
     grid-template-columns: 550px 1fr;
     grid-column-gap: 2rem;
-
-    @media screen and (min-width: 479px) {
-        // height: 100vh;
-    }
 
     h2 {
         letter-spacing: .1rem;
@@ -58,7 +51,6 @@
 #each_work_main_title {
     font-size: 3rem;
     text-shadow: 0 0 3px $green;
-    // border-right: .3rem solid orange; /* The typwriter cursor */
     padding-right: .5rem;
     animation: blink-caret 1s step-start infinite;
     display: inline-block;
@@ -69,15 +61,8 @@
 }
 
 #video_div {
-    // padding: 1rem;
     position: relative;
     transition: 1s ease;
-    // max-width: 600px;
-
-    // border: $green solid 2px;
-    // -webkit-box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
-    // -moz-box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
-    // box-shadow: 0px 0px 3px 0px rgba(0,255,0,1);
 
     h2 {
         position: absolute;
@@ -94,18 +79,6 @@
     img {
         border: .25px solid $textWhite;
     }
-
-    // p:first-of-type {
-    //     margin-bottom: 0;
-    // }
-
-    // p:last-of-type {
-    //     margin-top: 0;
-    // }
-
-    // .orange {
-    //     color: $orange;
-    // }
 }
 
 .each_work_description {
@@ -113,7 +86,6 @@
 
     p {
         margin: 0;
-        // color: $orange;
     }
 
     ul {
@@ -143,7 +115,6 @@
     font-family: $font_digit;
     letter-spacing: .1rem;
     color: $green;
-    // text-shadow: 0 0 3px $green;
 }
 
 .work_links p {
@@ -173,15 +144,10 @@
 }
 
 @media screen and (max-width: 991px) {
-    #each_work_body {
-        padding: 0 2rem;
-    }
-
     #each_work_main {
         display: block;
-        // grid-template-columns: 1fr;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     #video_div {
@@ -196,7 +162,6 @@
     #each_work_main {
         h1 {
             font-size: 2.5rem;
-            // padding-left: 1rem;
         }
 
         #video_div {

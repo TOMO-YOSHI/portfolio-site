@@ -406,8 +406,8 @@ ul {
 }
 
 .shut_down {
-  -webkit-animation: shutDown 1.5s ease;
-          animation: shutDown 1.5s ease;
+  -webkit-animation: shutDown 1.8s ease;
+          animation: shutDown 1.8s ease;
 }
 
 .set_up {
@@ -551,8 +551,8 @@ ul {
 }
 
 .slide_out_left {
-  -webkit-animation: slideOutLeft .45s ease;
-          animation: slideOutLeft .45s ease;
+  -webkit-animation: slideOutLeft .75s ease;
+          animation: slideOutLeft .75s ease;
 }
 
 @-webkit-keyframes slideOutLeft {
@@ -605,8 +605,8 @@ ul {
 }
 
 .slide_out_right {
-  -webkit-animation: slideOutRight .45s ease;
-          animation: slideOutRight .45s ease;
+  -webkit-animation: slideOutRight .75s ease;
+          animation: slideOutRight .75s ease;
 }
 
 @-webkit-keyframes slideOutRight {
@@ -2088,13 +2088,10 @@ body {
 }
 
 @media screen and (max-width: 991px) {
-  #each_work_body {
-    padding: 0 2rem;
-  }
   #each_work_main {
     display: block;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   #video_div {
     margin-bottom: 1.25rem;
