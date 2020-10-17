@@ -90,7 +90,6 @@ client
           // console.log(workName);
 
           let eachWork = `
-            <h1 id="each_work_main_title">Protfolio</h1>
             <h2>${workName}</h2>
             <div id="video_div">
                 <p>Demo Video</p>
@@ -112,7 +111,9 @@ client
             </div>
           `;
 
-          $("#each_work_main").prepend(eachWork);
+          $("#each_work_contents").removeClass("loader");
+
+          $("#each_work_contents").append(eachWork);
         });
     });
   })
