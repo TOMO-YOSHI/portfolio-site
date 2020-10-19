@@ -2004,11 +2004,6 @@ body {
   padding: 2.2rem 2rem 0;
   margin: 0 auto;
   max-width: 1000px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 550px 1fr;
-      grid-template-columns: 550px 1fr;
-  grid-column-gap: 2rem;
 }
 
 #each_work_main h2 {
@@ -2030,6 +2025,14 @@ body {
   letter-spacing: .25rem;
   margin-bottom: 3rem;
   grid-column: span 2;
+}
+
+#each_work_contents {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 550px 1fr;
+      grid-template-columns: 550px 1fr;
+  grid-column-gap: 2rem;
 }
 
 #video_div {
@@ -2132,9 +2135,11 @@ body {
 
 @media screen and (max-width: 991px) {
   #each_work_main {
-    display: block;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  #each_work_contents {
+    display: block;
   }
   #video_div {
     margin-bottom: 1.25rem;
