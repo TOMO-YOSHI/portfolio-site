@@ -13,14 +13,6 @@ import { globalNav } from './globalNav/globalNav.js';
 
 globalNav("skills");
 
-//  Open Skills List
-
-$('#hard_skills_div .skills_open_close').click(function () {
-    $("#hard_skills_logo").toggleClass('height_zero');
-    $("#hard_skills_logo").toggleClass('fade_in');
-
-    $(this).text().toLowerCase() === "open" ? $(this).text("Close") : $(this).text("Open");
-});
 
 // Skills nav
 
@@ -46,6 +38,8 @@ $("#skills-nav li").click(function(){
         skillsDivIdName = "#" + selectedSkill.toLowerCase() + "_div";
 
     $("#hard_skills_div, #tools_div, #soft_skills_div").addClass('display_none');
+    $("#skills-nav li").removeClass('orange');
     $(skillsDivIdName).removeClass('display_none');
+    $("#skills-nav-" + selectedSkill.toLowerCase()).addClass('orange');
 });
 

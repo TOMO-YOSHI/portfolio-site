@@ -577,33 +577,6 @@ ul {
   }
 }
 
-.slide_in_left {
-  -webkit-animation: slideInLeft .45s ease;
-          animation: slideInLeft .45s ease;
-}
-
-@-webkit-keyframes slideInLeft {
-  0% {
-    -webkit-transform: translateX(-120%);
-            transform: translateX(-120%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-    -webkit-transform: translateX(-120%);
-            transform: translateX(-120%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-}
-
 .slide_out_right {
   -webkit-animation: slideOutRight .75s ease;
           animation: slideOutRight .75s ease;
@@ -628,33 +601,6 @@ ul {
   100% {
     -webkit-transform: translateX(120%);
             transform: translateX(120%);
-  }
-}
-
-.slide_in_right {
-  -webkit-animation: slideOutRight .45s ease;
-          animation: slideOutRight .45s ease;
-}
-
-@-webkit-keyframes slideInRight {
-  0% {
-    -webkit-transform: translateX(120%);
-            transform: translateX(120%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    -webkit-transform: translateX(120%);
-            transform: translateX(120%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
   }
 }
 
@@ -1440,10 +1386,6 @@ body {
     text-shadow: 0 0 3px #00FF00;
     top: -3.25rem;
     font-size: 2rem;
-    border-right: .15em solid orange;
-    /* The typwriter cursor */
-    -webkit-animation: typing_hard_skills 1.25s steps(30, end), blink-caret 1s step-start infinite;
-            animation: typing_hard_skills 1.25s steps(30, end), blink-caret 1s step-start infinite;
   }
 }
 
@@ -1462,10 +1404,6 @@ body {
     text-shadow: 0 0 3px #00FF00;
     top: -3.25rem;
     font-size: 2rem;
-    border-right: .15em solid orange;
-    /* The typwriter cursor */
-    -webkit-animation: typing_tools 0.75s steps(30, end), blink-caret 1s step-start infinite;
-            animation: typing_tools 0.75s steps(30, end), blink-caret 1s step-start infinite;
   }
 }
 
@@ -1484,10 +1422,6 @@ body {
     text-shadow: 0 0 3px #00FF00;
     top: -3.25rem;
     font-size: 2rem;
-    border-right: .15em solid orange;
-    /* The typwriter cursor */
-    -webkit-animation: typing_soft_skills 1.25s steps(30, end), blink-caret 1s step-start infinite;
-            animation: typing_soft_skills 1.25s steps(30, end), blink-caret 1s step-start infinite;
   }
 }
 
