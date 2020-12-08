@@ -92,7 +92,7 @@ client
           let eachWork = `
             <h2>${workName}</h2>
             <div id="video_div">
-                <p>Demo Video</p>
+                <p>Image</p>
                 <img src="${imageUrl}" alt="${workName}">
             </div>
             <div class="each_work_description">
