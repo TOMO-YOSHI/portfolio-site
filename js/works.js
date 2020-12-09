@@ -2,6 +2,9 @@ import '../style.css';
 import $ from 'jquery';
 
 const contentful = require("contentful");
+// require("dotenv").config();
+
+console.log(process.env.CONTENTFUL_ACCESSTOKEN);
 
 // PageTransitionAnimation ****************************************
 import { pageSlideTransitionAnimationWithArguments } from './pageTransition/pageTransitionAnimation.js';
@@ -20,7 +23,8 @@ globalNav("works");
 
 const client = contentful.createClient({
   space: "cggsnbtxpwpk",
-  accessToken: "OWFLFySicDm2GDH9jnz3VLOdN8_2ojMCgcM64S0Mirs",
+  accessToken: "OWFLFySicDm2GDH9jnz3VLOdN8_2ojMCgcM64S0Mirs"
+  // accessToken: process.env.CONTENTFUL_ACCESSTOKEN
 });
 
 // client.getEntry("47uMEVsOZHp4SxnBvOnkJh").then(function (entry) {
