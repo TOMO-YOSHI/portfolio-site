@@ -49,12 +49,16 @@ const urlParams = new URLSearchParams(queryString);
 let title = urlParams.get("title");
 console.log(title);
 
-if (title.indexOf(" ") > -1) {
-  title =
-    title.slice(0, title.indexOf(" ")) +
-    "_" +
-    title.slice(title.indexOf(" ") + 1);
-}
+// if (title.indexOf(" ") > -1) {
+//   title =
+//     title.slice(0, title.indexOf(" ")) +
+//     "_" +
+//     title.slice(title.indexOf(" ") + 1);
+// }
+
+// title.replace(" ", "_");
+
+console.log(title);
 
 client
   .getEntries({
