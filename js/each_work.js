@@ -47,7 +47,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 let title = urlParams.get("title");
-console.log(title);
+// console.log(title);
 
 // if (title.indexOf(" ") > -1) {
 //   title =
@@ -58,7 +58,7 @@ console.log(title);
 
 // title.replace(" ", "_");
 
-console.log(title);
+// console.log(title);
 
 client
   .getEntries({
@@ -110,7 +110,10 @@ client
 
                 <div class="work_links">
                     <p><a href="${item.fields.webPageUrl}">Visit the Actual Web Page</a></p>
-                    <p><a href="${item.fields.githubUrl}">Look into the Code (Go to GitHub)</a></p>
+                    ${
+                      item.fields.githubUrl ? `<p><a href="${item.fields.githubUrl}">Look into the Code (Go to GitHub)</a></p>`
+                      : `<p class="orange">Sorry Github is private !</p>`
+                    }
                 </div>
             </div>
           `;
