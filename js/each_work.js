@@ -21,8 +21,8 @@ globalNav("profile");
 // const contentful = require("contentful");
 
 const client = contentful.createClient({
-  space: "cggsnbtxpwpk",
-  accessToken: "OWFLFySicDm2GDH9jnz3VLOdN8_2ojMCgcM64S0Mirs",
+  space: process.env.CONTENTFUL_SPACE,
+  accessToken: process.env.CONTENTFUL_ACCESSTOKEN,
 });
 
 // client.getEntry("47uMEVsOZHp4SxnBvOnkJh").then(function (entry) {

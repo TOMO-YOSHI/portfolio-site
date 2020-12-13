@@ -2,6 +2,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: {
@@ -106,5 +107,9 @@ module.exports = {
       template: "./templates/contact.hbs",
       description: "This is a contact page of TOMO's portfolio",
     }),
+    new Dotenv({
+      path: '.env',
+      safe: false
+    })
   ],
 };
