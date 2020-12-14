@@ -84,12 +84,12 @@ client
 
           let workName = item.fields.workName;
 
-          if (workName.indexOf("_") > -1) {
-            workName =
-              workName.slice(0, workName.indexOf("_")) +
-              " " +
-              workName.slice(workName.indexOf("_") + 1);
-          }
+          // if (workName.indexOf("_") > -1) {
+          //   workName =
+          //     workName.slice(0, workName.indexOf("_")) +
+          //     " " +
+          //     workName.slice(workName.indexOf("_") + 1);
+          // }
 
           // console.log(workName);
 
