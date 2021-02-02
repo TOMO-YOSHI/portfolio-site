@@ -1,5 +1,6 @@
 import '../style.css';
 import $ from 'jquery';
+import 'regenerator-runtime/runtime'
 
 const contentful = require("contentful");
 
@@ -41,9 +42,10 @@ client
   })
   .then((response) => {
     // console.log(response.items);
-    response.items.map((item) => {
-      // console.log(item);
-      const asset = client
+    const works = [];
+    response.items.map( async (item, index) => {
+      console.log(item.fields.workName)
+      const response = await client
         .getAsset(item.fields.image[0].sys.id)
         .then((asset) => {
           const imageUrl = "https:" + asset.fields.file.url;
@@ -54,23 +56,14 @@ client
             coreTechnology += `<li>&nbsp;${item}</li>`;
           });
 
-          // console.log(coreTechnology);
-
           let workName = item.fields.workName;
 
-          // if (workName.indexOf("_") > -1) {
-          //   workName =
-          //     workName.slice(0, workName.indexOf("_")) +
-          //     " " +
-          //     workName.slice(workName.indexOf("_") + 1);
-          // }
-
-          // console.log(workName);
+          console.log(workName)
 
           let eachWork = `
             <div class="each_work">
-                <h3>${workName}</h3>
                 <img src="${imageUrl}" alt="${asset.fields.title}">
+                <h3>${workName}</h3>
                 <div class="work_description">
                     <p>Core technology</p>
                     <ul>
@@ -86,11 +79,30 @@ client
           `;
 
           $("#personal_works").removeClass("loader");
-
           $("#personal_works").append(eachWork);
-        });
-    });
-  })
+
+          // works.push(eachWork);
+
+          // console.log(response.items.length);
+          // console.log("index",index)
+          // return Promise.resolve("ok")
+          // if (response.items.length === works.length) {
+          //   $("#personal_works").removeClass("loader");
+    
+          //   works.forEach(el => {
+          //     $("#personal_works").append(el);
+          //   })
+          // }    
+        })
+      // console.log(response);
+  });
+})
+// .then(results=>{
+//   console.log('test',results);
+  // $("#personal_works").removeClass("loader");
+
+  // $("#personal_works").append(eachWork);
+// })
   .catch(console.error);
 
 // Get content for group works
@@ -130,8 +142,8 @@ client
 
           let eachWork = `
             <div class="each_work">
-                <h3>${workName}</h3>
                 <img src="${imageUrl}" alt="${asset.fields.title}">
+                <h3>${workName}</h3>
                 <div class="work_description">
                     <p>Core technology</p>
                     <ul>

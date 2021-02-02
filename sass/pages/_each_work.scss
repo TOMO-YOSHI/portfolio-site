@@ -63,9 +63,9 @@
     grid-column-gap: 2rem;
 }
 
-#video_div {
+#visual_div {
     position: relative;
-    transition: 1s ease;
+    // transition: 1s ease;
 
     h2 {
         position: absolute;
@@ -83,6 +83,20 @@
         border: .25px solid $textWhite;
     }
 }
+
+.video-container {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
 
 .each_work_description {
     font-size: 1.25rem;
@@ -129,7 +143,6 @@
     text-shadow: 0 0 3px $orange;
 }
 
-
 // animation ******************************************************
 
 @keyframes blink-caret {
@@ -155,7 +168,7 @@
         display: block;
     }
 
-    #video_div {
+    #visual_div {
         margin-bottom: 1.25rem;
     }
 
@@ -169,7 +182,7 @@
             font-size: 2.5rem;
         }
 
-        #video_div {
+        #visual_div {
             padding: 0;
             border: none;
             -webkit-box-shadow: none;
@@ -184,5 +197,13 @@
                 padding: 0rem;
             }
         }
+
+        .video-container {
+            width: 100vw;
+            padding-top: 56.25% !important;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        
     }
 }

@@ -39,10 +39,9 @@ body {
 
     transform: translateY(-10%);
 
-    @media screen and (max-width: 576px) { 
+    @media screen and (max-width: 576px) {
         width: 340px;
     }
-
 }
 
 // Set Effect time
@@ -50,14 +49,16 @@ $effectTime: 2.5s;
 
 #go_home {
     border: $green solid 2px;
-    padding: .25rem;
+    padding: 0.25rem;
     margin-top: 1.25rem !important;
-    animation-delay: $effectTime + .3s !important;
+    animation-delay: $effectTime + 0.3s !important;
     animation: fadeUp 1.5s ease, shake 1s infinite alternate;
     cursor: pointer;
 
-    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 3px 7.5px 0 rgba(0, 255, 0, 1);
-    -moz-box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 3px 7.5px 0 rgba(0, 255, 0, 1);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1),
+        0 3px 7.5px 0 rgba(0, 255, 0, 1);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1),
+        0 3px 7.5px 0 rgba(0, 255, 0, 1);
     box-shadow: 0 2px 4px 0 rgba(0, 255, 0, 1), 0 3px 7.5px 0 rgba(0, 255, 0, 1);
 
     // a {
@@ -66,53 +67,47 @@ $effectTime: 2.5s;
     // }
 }
 
-
 .typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation-delay: $effectTime / 2 + .1s !important;
-  animation: 
-    typing ($effectTime / 2) steps(30, end),
-    blink-caret 1s step-start infinite,
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation-delay: $effectTime / 2 + 0.1s !important;
+    animation: typing ($effectTime / 2) steps(30, end),
+        blink-caret 1s step-start infinite;
 }
 
 .typewriter p {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing_2 ($effectTime / 2) steps(30, end),
-    blink-caret 1s step-start infinite;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing_2 ($effectTime / 2) steps(30, end),
+        blink-caret 1s step-start infinite;
 }
 
 @media screen and (max-width: 576px) {
-  .typewriter h1 {
-    font-size: 1.75rem;
-    animation: 
-      typing_mobile ($effectTime / 2) steps(30, end),
-      blink-caret 1s step-start infinite;
-  }
+    .typewriter h1 {
+        font-size: 1.75rem;
+        animation: typing_mobile ($effectTime / 2) steps(30, end),
+            blink-caret 1s step-start infinite;
+    }
 
-  #welcome_message p{
-  // .typewriter p {
-    animation: 
-      typing_2_mobile ($effectTime / 2) steps(30, end),
-      blink-caret 1s step-start infinite;
-  }
+    #welcome_message p {
+        // .typewriter p {
+        animation: typing_2_mobile ($effectTime / 2) steps(30, end),
+            blink-caret 1s step-start infinite;
+    }
 
-  #index_main p,
-  #index_main #go_home {
-  font-size: 1.75rem !important;
-  }
+    #index_main p,
+    #index_main #go_home {
+        font-size: 1.75rem !important;
+    }
 }
 
-
-$portraitOpacity: .35;
+$portraitOpacity: 0.35;
 
 #index_portrait {
     position: absolute;
@@ -120,15 +115,15 @@ $portraitOpacity: .35;
     width: 400px;
     // filter: grayscale(80%);
 
-    @media screen and (max-width: 576px) { 
+    @media screen and (max-width: 576px) {
         width: 300px;
-     }
+    }
 
     top: 50%;
-   	left: 10%;
+    left: 10%;
     transform: translateY(-50%) translateX(-50%);
     z-index: 25;
-    
+
     animation-delay: $effectTime !important;
     animation: portraitSlideIn 1.5s ease;
 }
@@ -144,75 +139,124 @@ $portraitOpacity: .35;
     animation: portraitSlideIn_2 1.5s ease;
 
     @media screen and (max-width: 575px) {
-      display: none;
+        display: none;
     }
 }
 
 @-moz-document url-prefix() {
-.index_portrait_line {
-  display: none;
-}
+    .index_portrait_line {
+        display: none;
+    }
 }
 
 #skip_animation {
-  position: fixed;
-  bottom: 1rem;
-  right: 1.5rem;
-  z-index: 100;
-  font-weight: 300;
-  // font-size: small;
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+    z-index: 100;
+    font-weight: 300;
+    // font-size: small;
 }
 
 // Animation ***********************************
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 427px }
+    from {
+        width: 0;
+    }
+    to {
+        width: 427px;
+    }
 }
 
 @keyframes typing_2 {
-  from { width: 0 }
-  to { width: 303px }
+    from {
+        width: 0;
+    }
+    to {
+        width: 303px;
+    }
 }
 
 /* The typing effect mobile */
 @keyframes typing_mobile {
-  from { width: 0 }
-  to { width: 299px }
+    from {
+        width: 0;
+    }
+    to {
+        width: 299px;
+    }
 }
 
 @keyframes typing_2_mobile {
-  from { width: 0 }
-  to { width: 212px }
+    from {
+        width: 0;
+    }
+    to {
+        width: 212px;
+    }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
 }
 
 @keyframes portraitSlideIn {
-  0% { left: 0%; opacity: 0 }
-  100% { left: 10%; opacity: $portraitOpacity }
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+    100% {
+        left: 10%;
+        opacity: $portraitOpacity;
+    }
 }
 
 @keyframes portraitSlideIn_2 {
-  0% { left: 0%; }
-  100% { left: 100%; }
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
 }
 
 @keyframes fadeUp {
-  0% { transform: translateY(70px); opacity: 0 }
-  100% { transform: translateY(10px); opacity: 1 }
+    0% {
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
 }
 
 @keyframes shake {
-  0% { transform: skewX(-100deg); }
-  5% { transform: skewX(100deg); }
-  10% { transform: skewX(-100deg); }
-  15% { transform: skewX(100deg); }
-  20% { transform: skewX(0deg); }
-  100% { transform: skewX(0deg); }  
+    0% {
+        transform: skewX(-100deg);
+    }
+    5% {
+        transform: skewX(100deg);
+    }
+    10% {
+        transform: skewX(-100deg);
+    }
+    15% {
+        transform: skewX(100deg);
+    }
+    20% {
+        transform: skewX(0deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
 }

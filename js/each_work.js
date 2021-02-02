@@ -91,13 +91,14 @@ client
           //     workName.slice(workName.indexOf("_") + 1);
           // }
 
-          // console.log(workName);
+          console.log(item.fields);
 
           let eachWork = `
             <h2>${workName}</h2>
-            <div id="video_div">
-                <p>Image</p>
-                <img src="${imageUrl}" alt="${workName}">
+            <div id="visual_div" ${item.fields.youTubeUrl ? 'class="video-container"' : null}>
+                ${item.fields.youTubeUrl ? item.fields.youTubeUrl :
+                `<p>Image</p>
+                <img src="${imageUrl}" alt="${workName}">`}
             </div>
             <div class="each_work_description">
                 <p class="orange">Core technology</p>
@@ -109,9 +110,11 @@ client
                 <p>${item.fields.aboutThisWork}</p>
 
                 <div class="work_links">
-                    <p><a href="${item.fields.webPageUrl}">Visit the Actual Web Page</a></p>
                     ${
-                      item.fields.githubUrl ? `<p><a href="${item.fields.githubUrl}">Look into the Code (Go to GitHub)</a></p>`
+                      item.fields.webPageUrl ? `<p><a href="${item.fields.webPageUrl}" target="_blank">Visit the Actual Web Page</a></p>` : ""
+                    }
+                    ${
+                      item.fields.githubUrl ? `<p><a href="${item.fields.githubUrl}" target="_blank">Look into the Code (Go to GitHub)</a></p>`
                       : `<p class="orange">Sorry Github is private !</p>`
                     }
                 </div>
