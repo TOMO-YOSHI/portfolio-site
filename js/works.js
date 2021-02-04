@@ -44,7 +44,7 @@ client
     // console.log(response.items);
     const works = [];
     response.items.map( async (item, index) => {
-      console.log(item.fields.workName)
+      // console.log(item.fields.workName)
       const response = await client
         .getAsset(item.fields.image[0].sys.id)
         .then((asset) => {
@@ -58,7 +58,7 @@ client
 
           let workName = item.fields.workName;
 
-          console.log(workName)
+          // console.log(workName)
 
           let eachWork = `
             <div class="each_work">

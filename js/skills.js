@@ -28,7 +28,7 @@ globalNav("skills");
 $("#skills-nav li").click(function () {
     $("#skills-nav li span").addClass("visibility_hidden");
 
-    console.log($(this).text());
+    // console.log($(this).text());
     let selectedSkill = $(this).text();
     selectedSkill = selectedSkill.slice(
         selectedSkill.indexOf(" ") + 1,
@@ -36,7 +36,7 @@ $("#skills-nav li").click(function () {
             ? undefined
             : selectedSkill.lastIndexOf(" ")
     );
-    console.log("#skills-nav-" + selectedSkill.toLowerCase() + " span");
+    // console.log("#skills-nav-" + selectedSkill.toLowerCase() + " span");
 
     // selectedSkill.slice(0, )
     $("#skills-nav-" + selectedSkill.toLowerCase() + " span").removeClass(

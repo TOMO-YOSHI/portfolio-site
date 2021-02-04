@@ -66,7 +66,7 @@ client
     "fields.workName[in]": title,
   })
   .then((response) => {
-    console.log(response.items);
+    // console.log(response.items);
     response.items.map((item) => {
       // console.log(item);
       const asset = client
@@ -91,7 +91,7 @@ client
           //     workName.slice(workName.indexOf("_") + 1);
           // }
 
-          console.log(item.fields);
+          // console.log(item.fields);
 
           let eachWork = `
             <h2>${workName}</h2>
