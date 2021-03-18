@@ -18,7 +18,7 @@ export function globalNav(pageName) {
         pageTransitionAnimationWithArguments(this,
         "#" + pageName + "_body",
             $(this).text().toLowerCase() === "welcome" ? 
-            "./index.html":
+            "./":
             "./" + $(this).text().toLowerCase() + ".html");
     })
 }
