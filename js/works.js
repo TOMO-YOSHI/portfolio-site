@@ -25,31 +25,21 @@ const client = contentful.createClient({
   accessToken: process.env.CONTENTFUL_ACCESSTOKEN
 });
 
-// client.getEntry("47uMEVsOZHp4SxnBvOnkJh").then(function (entry) {
-//   // logs the entry metadata
-//   console.log(entry.sys);
-
-//   // logs the field with ID title
-//   console.log(entry.fields.workName);
-// });
-
 // Get content for personal works
 client
   .getEntries({
     content_type: "portfolio",
     "fields.workType[in]": "Personal",
-    order: "fields.workName",
+    order: "fields.order",
   })
   .then((response) => {
-    // console.log(response.items);
-    const works = [];
+    const personalWorks = [];
+
     response.items.map( async (item, index) => {
-      // console.log(item.fields.workName)
-      const response = await client
+      client
         .getAsset(item.fields.image[0].sys.id)
         .then((asset) => {
           const imageUrl = "https:" + asset.fields.file.url;
-          // console.log(imageUrl);
 
           let coreTechnology = ``;
           item.fields.coreTechnology.map((item) => {
@@ -57,8 +47,6 @@ client
           });
 
           let workName = item.fields.workName;
-
-          // console.log(workName)
 
           let eachWork = `
             <div class="each_work">
@@ -78,56 +66,46 @@ client
             </div>
           `;
 
-          $("#personal_works").removeClass("loader");
-          $("#personal_works").append(eachWork);
+          personalWorks.push({ index, eachWork });
 
-          // works.push(eachWork);
+          if (response.items.length === personalWorks.length) {
+            personalWorks.sort(function (a, b) {
+              return a.index - b.index;
+            });
+            $("#personal_works").removeClass("loader");  // ** Need to chage **
 
-          // console.log(response.items.length);
-          // console.log("index",index)
-          // return Promise.resolve("ok")
-          // if (response.items.length === works.length) {
-          //   $("#personal_works").removeClass("loader");
-    
-          //   works.forEach(el => {
-          //     $("#personal_works").append(el);
-          //   })
-          // }    
+            personalWorks.forEach(el => {
+              $("#personal_works").append(el.eachWork);  // ** Need to chage **
+            })
+          }
+
+          // $("#personal_works").removeClass("loader");
+          // $("#personal_works").append(eachWork);
+
         })
-      // console.log(response);
   });
 })
-// .then(results=>{
-//   console.log('test',results);
-  // $("#personal_works").removeClass("loader");
-
-  // $("#personal_works").append(eachWork);
-// })
-  .catch(console.error);
+.catch(console.error);
 
 // Get content for group works
 client
   .getEntries({
     content_type: "portfolio",
     "fields.workType[in]": "Group", // ** Need to chage **
-    order: "fields.workName",
+    order: "fields.order",
   })
   .then((response) => {
-    // console.log(response.items);
-    response.items.map((item) => {
-      // console.log(item);
-      const asset = client
+    const groupWorks = [];
+    response.items.map((item, index) => {
+      client
         .getAsset(item.fields.image[0].sys.id)
         .then((asset) => {
           const imageUrl = "https:" + asset.fields.file.url;
-          // console.log(imageUrl);
 
           let coreTechnology = ``;
           item.fields.coreTechnology.map((item) => {
             coreTechnology += `<li>&nbsp;${item}</li>`;
           });
-
-          // console.log(coreTechnology);
 
           let workName = item.fields.workName;
 
@@ -138,8 +116,6 @@ client
               workName.slice(workName.indexOf("_") + 1);
           }
 
-          // console.log(workName);
-
           let eachWork = `
             <div class="each_work">
                 <img src="${imageUrl}" alt="${asset.fields.title}">
@@ -158,9 +134,21 @@ client
             </div>
           `;
 
-          $("#group_works").removeClass("loader");  // ** Need to chage **
+          groupWorks.push({index, eachWork});
 
-          $("#group_works").append(eachWork);  // ** Need to chage **
+          if(response.items.length === groupWorks.length) {
+            groupWorks.sort(function (a, b) {
+              return a.index - b.index;
+            });
+            $("#group_works").removeClass("loader");  // ** Need to chage **
+
+            groupWorks.forEach(el => {
+              $("#group_works").append(el.eachWork);  // ** Need to chage **
+            })
+          }
+          // $("#group_works").removeClass("loader");  // ** Need to chage **
+
+          // $("#group_works").append(eachWork);  // ** Need to chage **
         });
     });
   })
