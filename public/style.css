@@ -921,7 +921,7 @@ body {
     width: 0;
   }
   to {
-    width: 303px;
+    width: 273px;
   }
 }
 
@@ -930,7 +930,7 @@ body {
     width: 0;
   }
   to {
-    width: 303px;
+    width: 273px;
   }
 }
 
@@ -957,7 +957,7 @@ body {
     width: 0;
   }
   to {
-    width: 212px;
+    width: 192px;
   }
 }
 
@@ -966,7 +966,7 @@ body {
     width: 0;
   }
   to {
-    width: 212px;
+    width: 192px;
   }
 }
 
@@ -2257,6 +2257,8 @@ body {
           align-items: center;
   top: 0;
   display: none;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 #submit_result_message_p {
