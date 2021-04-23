@@ -146,6 +146,36 @@
     }
 }
 
+// Submit result message
+#submit_result_message_div {
+    position: fixed;
+    background-color: $backgroundColorBlack;
+    opacity: .9;
+    width: 100vw;
+    height: 100vh;
+    // display: flex;
+    flex-direction: column;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    display: none;
+}
+
+#submit_result_message_p {
+    font-family: $font_digit;
+    color: $orange;
+    letter-spacing: .15rem;
+    text-shadow: 0 0 3px $orange;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#submit_result_message_detail {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
 // Mobile layput
 
 @media screen and (max-width: 479px) {

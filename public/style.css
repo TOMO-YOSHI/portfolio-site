@@ -2238,6 +2238,41 @@ body {
   background-color: orange;
 }
 
+#submit_result_message_div {
+  position: fixed;
+  background-color: #101010;
+  opacity: .9;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  display: none;
+}
+
+#submit_result_message_p {
+  font-family: "digit", sans-serif;
+  color: orange;
+  letter-spacing: .15rem;
+  text-shadow: 0 0 3px orange;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+#submit_result_message_detail {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 @media screen and (max-width: 479px) {
   #contact_main #contact_form label {
     display: unset;

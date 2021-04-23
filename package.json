@@ -21,10 +21,15 @@
     "url": "https://github.com/TOMO-YOSHI/portfolio-site/issues"
   },
   "dependencies": {
-    "contentful": "^7.14.7",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "contentful": "^8.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
     "gh-pages": "^3.1.0",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "nodemailer": "^6.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
