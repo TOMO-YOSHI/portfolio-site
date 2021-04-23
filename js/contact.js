@@ -39,7 +39,7 @@ const onClickHandler = async(e) => {
         return
     }
 
-    const serverRes = await fetch('https://tomohiroyoshida.com/mail', {
+    const serverRes = await fetch('http://localhost:8080/mail', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
