@@ -38,7 +38,7 @@ app.post('/mail', async(req, res)=>{
         from: 'tomohiroyoshida10@gmail.com',
         to: email,
         subject: 'Thank you for your inquiry',
-        text: `Dear ${name},\n\nThis is an automated message.\nThank you for contacting me from my website.\nI am going to reply to your message in a couple of days.\n\nYour message:\n${message}\n\nTomohiro Yoshida(TOMO'S Portfolio)`
+        text: `Dear ${name},\n\nThis is an automated message.\nThank you for contacting me on my website.\nI am going to reply to your message in a couple of days.\n\nYour message:\n${message}\n\nTomohiro Yoshida(TOMO'S Portfolio)`
     }
 
     const mailOptionsForHost = {

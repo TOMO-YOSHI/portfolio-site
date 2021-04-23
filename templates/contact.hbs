@@ -51,33 +51,40 @@
         <p>If you have something to talk to me, feel free to get in touch with me. I'm waiting for your kind email!</p>
         <div id="form_div">
             <!-- <h2>Contact Form</h2> -->
-            <form id="contact_form" action="https://formspree.io/f/xyybzrpd" method="POST">
+            <form id="contact_form" action="/" action='POST'>
                 <label id="contact_name">
                     <span>Name :</span>
-                    <input type="text" name="name" required>
+                    <input id='name' type="text" name="name" required>
                 </label>
                 <label id="contact_company_name">
                     <span>Company name :</span>
-                    <input type="text" name="company_name">
+                    <input id='companyName' type="text" name="companyName">
                 </label>
                 <label id="contact_email">
                     <span>Email :</span>
-                    <input type="text" name="_replyto" required>
+                    <input id='email' type="text" name="email" required>
                 </label>
                 <label id="contact_message">
                     <span>Message :</span>
-                    <textarea name="message" required></textarea>
+                    <textarea id='message' name="message" required></textarea>
                 </label>
             
                 <!-- your other form fields go here -->
             
-                <button type="submit">Send</button>
+                <button id='submitBtn' type="submit">Send</button>
             </form>
         </div>
         <div class="back_and_go_div">
             <p id="go_to_works" class="back_page">&lt; Back To works Page</p>
         </div>
     </main>
+
+    <!-- Submit Message -->
+    <div id='submit_result_message_div'>
+        <p id='submit_result_message_p'></p>
+        <p id='submit_result_message_detail'></p>
+    </div>
+
 
     <footer id="pageFooter">
         <div id="nameAndCopyDiv">
