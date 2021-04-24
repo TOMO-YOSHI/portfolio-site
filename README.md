@@ -1,20 +1,42 @@
 # portfolio-site
+![portfolio_top](./public/sources/portfolio_top.gif)
 
-## Available Scripts
+## About
+This is the portfolio site to showcase my works and skills.
 
-In the project directory, you can run:
+To see this website, please visit https://tomohiroyoshida.com.
 
-### `npm run dev`
+## Why I (our team) created this web application
+I created the website to understand how to develop website with vanilla JavaScript and related techniques.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:9000](http://localhost:9000) to view it in the browser.
+I can create a website with conventional technology.<br />
+(I have used React to develop websites in other projects. If you would like to see other projects, please vists my works page, https://tomohiroyoshida.com/works.html, and take a look at my other works.)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+[![portfolio_works](./public/sources/portfolio_myworks.png)](https://tomohiroyoshida.com/works.html)
 
-### `npm run build`
+## Technology
+The technology listed below is used to create this website.
 
-Builds the app for production to the `public` folder.<br />
-It correctly bundles html & js in production mode and optimizes the build for the best performance.
+* Contentful(Headless CMS)
+* JavaScript & jQuery
+* SASS
+* CSS3
+* Webpack
 
-The app is ready to be deployed!
+### Headless CMS
+
+I adopt Contentful (https://www.contentful.com) to manage contents of this website.
+
+### CSS3
+I added animations to the page transition and some other actions visitors made to make the website more attractive for visitors.
+
+### Webpack
+I configured the webpack file to bundle JavaScript file.
+
+### Others
+#### Mailer
+I have created a server-side functionality for contact form. When a visitor submits a form, the automated message is sent to the visitor's email address while the message inputed by the visitor is sent to my email address.
+
+https://tomohiroyoshida.com/contact.html
+
+[![portfolio_works](./public/sources/portfolio_contact.png)](https://tomohiroyoshida.com/contact.html)
