@@ -39,7 +39,7 @@ const onClickHandler = async(e) => {
         return
     }
 
-    const serverRes = await fetch('https://tomohiroyoshida.com/mail', {
+    const serverRes = await fetch('https://tomohiroyoshida.com/mail/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
